@@ -13,6 +13,7 @@ module.exports = {
         lightBlue: "#C4E5FA",
         lightPurple: "#C9CDFA",
         darkPurple: "#050A53",
+        skyBlue: "#4DAEEA",
       },
       fontFamily: {
         sans: ["futura-pt, Arial, Tahoma, sans-serif"],

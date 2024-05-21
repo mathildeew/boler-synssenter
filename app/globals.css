@@ -176,4 +176,12 @@
   .baseButton {
     @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-10 rounded-full;
   }
+
+  .service {
+    @apply flex flex-col items-center;
+  }
+
+  .circle {
+    @apply w-32 h-32 rounded-full;
+  }
 }

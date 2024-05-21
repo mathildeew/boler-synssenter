@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="no">
       <body>
         <Header />
-        <main>{children}</main>
+        <main className="flex flex-col gap-20">{children}</main>
         <Footer />
       </body>
     </html>
