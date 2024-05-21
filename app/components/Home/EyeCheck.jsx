@@ -2,20 +2,24 @@ import Link from "next/link";
 
 export default function EyeCheck() {
   return (
-    <section className="bg-lightBeige px-4 py-16 flex flex-col gap-6 items-center">
+    <section className="bg-lightBeige px-4 py-16 flex flex-col gap-8 items-center justify-center md:flex-row md:gap-16 md:py-28">
       <img
-        className="w-full h-96 object-cover rounded-3xl"
-        src="vicko-mozara-m82uh_vamhg-unsplash.jpg"
+        className="w-full h-72 object-cover rounded-3xl md:w-1/3 "
+        src="harpreet-singh-ioYYWWX2fjk_downsized.jpg"
       />
-      <h1 className="text-darkPurple">Ta vare på synet ditt</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cupiditate
-        deserunt, quae labore beatae odio voluptatum ut harum corrupti maxime
-        doloribus, quos repellat velit iste ratione quasi! Ut, non fugit.
-      </p>
-      <Link href="/synsundersokelse" className="baseButton text-lightBeige">
-        Bestill synsundersøkelse
-      </Link>
+      <div className="flex flex-col gap-6 items-center md:w-1/2">
+        <h1 className="text-darkPurple">Ta vare på synet ditt</h1>
+        <p>
+          Å passe på synet er avgjørende for å opprettholde god livskvalitet og
+          forebygge alvorlige øyesykdommer. Regelmessige synsundersøkelser kan
+          avdekke tidlige tegn på problemer som kan behandles før de utvikler
+          seg, og sikre at du alltid har riktig brille- eller
+          kontaktlinsekorreksjon for best mulig syn.
+        </p>
+        <Link href="/synsundersokelse" className="baseButton text-lightBeige ">
+          Bestill synsundersøkelse
+        </Link>
+      </div>
     </section>
   );
 }

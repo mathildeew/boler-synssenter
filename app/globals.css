@@ -174,14 +174,19 @@
   }
 
   .baseButton {
-    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-10 rounded-full;
+    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-10 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
   .service {
-    @apply flex flex-col items-center;
+    @apply w-full flex flex-col items-center sm:w-48;
   }
 
   .circle {
-    @apply w-32 h-32 rounded-full;
+    @apply bg-lightBeige w-32 h-32 rounded-full;
+  }
+
+  .CMS {
+    background: center/cover no-repeat
+      url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
   }
 }

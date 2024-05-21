@@ -1,31 +1,37 @@
 export default function Services() {
   return (
-    <section className="px-6">
-      <h2>Våre tjenester</h2>
+    <section className="bg-lightPurple px-6 py-20 flex flex-col gap-10">
+      <div className="flex flex-col items-center">
+        <h2>Våre tjenester</h2>
+        <p>
+          Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.!
+        </p>
+      </div>
 
-      <div className="grid grid-cols-2 gap-y-16 items-center">
+      <div className="bg-white rounded-3xl flex flex-wrap justify-center text-center gap-8 py-10">
         <div className="service">
-          <div className="circle bg-lightBlue"></div>
+          <div className="circle"></div>
           <p>Synsundersøkelse</p>
         </div>
 
         <div className="service">
-          <div className="circle bg-lightBeige"></div>
+          <div className="circle"></div>
           <p>Øyehelse</p>
         </div>
 
         <div className="service">
-          <div className="circle bg-skyBlue"></div>
+          <div className="circle"></div>
           <p>Kontaktlinser</p>
         </div>
 
         <div className="service">
-          <div className="circle bg-lightPurple"></div>
+          <div className="circle "></div>
           <p>Synstrening</p>
         </div>
 
         <div className="service">
-          <div className="circle bg-darkPurple"></div>
+          <div className="circle"></div>
           <p>Førerkortattest</p>
         </div>
       </div>
