@@ -1,5 +1,5 @@
-import Image from "next/image";
+import News from "./components/Home/News";
 
 export default function Home() {
-  return <></>;
+  return <News />;
 }
