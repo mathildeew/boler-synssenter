@@ -6,5 +6,134 @@
 
 @layer base {
   body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header #logo {
+    width: auto;
+    height: 19.5px;
+    stroke: theme(colors.darkPurple);
+  }
+
+  footer {
+    margin-top: auto;
+
+    --size: 12px;
+    --R: calc(var(--size) * 1.28);
+
+    -webkit-mask: radial-gradient(
+          var(--R) at 50% calc(1.8 * var(--size)),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+      radial-gradient(
+          var(--R) at 50% calc(-0.8 * var(--size)),
+          #0000 99%,
+          #000 101%
+        )
+        50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
+  }
+
+  footer #logo {
+    width: 100px;
+    height: auto;
+    stroke: theme(colors.lightBlue);
+  }
+
+  h1 {
+    @apply font-serif;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 28px;
+    @apply font-sans;
+  }
+
+  p {
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  p,
+  a {
+    font-size: 18px;
+  }
+
+  p,
+  h3,
+  a {
+    @apply font-sans tracking-wide;
+  }
+
+  h3 {
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  nav a {
+    @apply font-sans tracking-wider hover:underline hover:underline-offset-2;
+    font-size: 20px;
+  }
+
+  .hamburger {
+    @apply bg-darkPurple w-full h-[2px] absolute transition-all ease-in-out duration-1000;
+  }
+
+  @keyframes animate-in-from-bottom {
+    0% {
+      transform: translateY(15px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  [data-animate-in] {
+    animation: animate-in-from-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+  }
+
+  [data-animation-order="1"] {
+    animation-delay: 0.1s;
+  }
+
+  [data-animation-order="2"] {
+    animation-delay: 0.15s;
+  }
+
+  [data-animation-order="3"] {
+    animation-delay: 0.2s;
+  }
+
+  [data-animation-order="4"] {
+    animation-delay: 0.25s;
+  }
+
+  [data-animation-order="5"] {
+    animation-delay: 0.3s;
+  }
+
+  [data-animation-order="6"] {
+    animation-delay: 0.35s;
+  }
+
+  [data-animation-order="7"] {
+    animation-delay: 0.4s;
+  }
+
+  [data-animation-order="8"] {
+    animation-delay: 0.45s;
+  }
+
+  [data-animation-order="9"] {
+    animation-delay: 0.5s;
   }
 }
