@@ -47,7 +47,7 @@
 
   h1 {
     @apply font-serif;
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
   }
 
@@ -162,11 +162,16 @@
   }
 
   .baseButton {
-    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-10 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
+    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-6 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
   .service {
     @apply w-full flex flex-col items-center gap-4 sm:w-48;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
   .circle {
