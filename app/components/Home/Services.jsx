@@ -1,7 +1,7 @@
 export default function Services() {
   return (
     <section className="bg-lightPurple w-full px-4 py-16 flex flex-col justify-center items-center gap-10 md:px-10 md:py-28">
-      <div className="text-center max-w-xl flex flex-col items-center">
+      <div className="text-center max-w-3xl flex flex-col items-center">
         <h2>Våre tjenester</h2>
         <p className="text-xl">Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell, dedikert til å gi deg best mulig øyehelse. Med høy kompetanse og lang erfaring sørger vi for at du får en profesjonell og trygg opplevelse ved hver synsundersøkelse og konsultasjon. Vår kunnskap er din trygghet.</p>
       </div>

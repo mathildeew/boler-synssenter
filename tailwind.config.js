@@ -15,6 +15,12 @@ module.exports = {
         sans: ["futura-pt, Arial, Tahoma, sans-serif"],
         serif: ["plantin, serif"],
       },
+      gridTemplateColumns: {
+        news: "repeat(4, minmax(85%, 1fr))",
+      },
+      screens: {
+        gridExpand: "600px",
+      },
     },
   },
   plugins: [],

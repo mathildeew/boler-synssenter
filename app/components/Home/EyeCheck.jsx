@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function EyeCheck() {
   return (
-    <section className="w-full bg-lightBeige px-4 py-16 flex justify-center md:px-10 md:py-28 ">
+    <section className="bg-lightBeige w-full flex justify-center px-4 py-16 md:px-10 md:py-28 ">
       <div className="max-w-[1750px] grid md:grid-cols-2 md:items-center md:gap-12">
         <img className="object-cover rounded-3xl " src="harpreet-singh-ioYYWWX2fjk_downsized.jpg" />
         <div className="flex flex-col gap-6 items-center">

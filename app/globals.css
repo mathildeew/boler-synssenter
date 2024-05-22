@@ -137,26 +137,11 @@
     animation-delay: 0.5s;
   }
 
-  .newsGrid {
-    margin: 0 calc(var(--page-gutter) * -1);
-    padding: 0 var(--page-gutter);
-    grid-gap: var(--grid-gutter);
+  .scroll-snap-mandatory {
     scroll-snap-type: x mandatory;
 
     &::-webkit-scrollbar {
       display: none;
-    }
-  }
-
-  @media (max-width: 499px) {
-    .newsGrid {
-      grid-template-columns: repeat(4, minmax(85%, 1fr));
-    }
-  }
-
-  @media (min-width: 500px) {
-    .newsGrid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
