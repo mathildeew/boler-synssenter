@@ -36,18 +36,7 @@
     --size: 12px;
     --R: calc(var(--size) * 1.28);
 
-    -webkit-mask: radial-gradient(
-          var(--R) at 50% calc(1.8 * var(--size)),
-          #000 99%,
-          #0000 101%
-        )
-        calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
-      radial-gradient(
-          var(--R) at 50% calc(-0.8 * var(--size)),
-          #0000 99%,
-          #000 101%
-        )
-        50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
+    -webkit-mask: radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%, radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
   }
 
   footer #logo {
@@ -64,7 +53,7 @@
 
   h2 {
     font-size: 28px;
-    @apply font-sans;
+    @apply font-sans mb-4;
   }
 
   p {
@@ -110,8 +99,7 @@
   }
 
   [data-animate-in] {
-    animation: animate-in-from-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      both;
+    animation: animate-in-from-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   [data-animation-order="1"] {
@@ -178,7 +166,7 @@
   }
 
   .service {
-    @apply w-full flex flex-col items-center sm:w-48;
+    @apply w-full flex flex-col items-center gap-4 sm:w-48;
   }
 
   .circle {
@@ -186,7 +174,6 @@
   }
 
   .CMS {
-    background: center/cover no-repeat
-      url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
+    background: center/cover no-repeat url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
   }
 }
