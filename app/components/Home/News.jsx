@@ -8,7 +8,7 @@ export default function News() {
   return (
     <section className="bg-lightBlue w-full flex flex-col items-center justify-center gap-10 pl-4 py-16 md:px-10 md:py-28 ">
       <h2 className="text-center">Nytt fra oss</h2>
-      <div className="max-w-[1750px] grid overflow-auto grid-cols-news scroll-snap-mandatory  gridExpand:grid-cols-2 md:gap-6 lg:grid-cols-4">
+      <div className="max-w-[1750px] grid gap-6 grid-cols-news overflow-auto scroll-snap-mandatory  gridExpand:grid-cols-2 md:gap-6 lg:grid-cols-4">
         <Link href="/" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
           <div className="flex flex-col gap-3 snap-center">
             <div className="overflow-hidden rounded-3xl">

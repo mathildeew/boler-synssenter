@@ -16,7 +16,7 @@ module.exports = {
         serif: ["plantin, serif"],
       },
       gridTemplateColumns: {
-        news: "repeat(4, minmax(85%, 1fr))",
+        news: "repeat(2, minmax(85%, 1fr))",
       },
       screens: {
         gridExpand: "600px",
