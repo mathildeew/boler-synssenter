@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <>
       <header className="relative lg:flex lg:justify-between z-20">
-        <div className="bg-white w-full h-20 px-4 flex items-center justify-between lg:z-auto lg:w-full lg:h-32 lg:px-10">
+        <div className="bg-white w-full h-20 max-w-[1460px] px-4 mx-auto flex items-center justify-between lg:z-auto lg:w-full lg:h-32 lg:px-10">
           <Link href="/">
             <BolerLogo />
           </Link>

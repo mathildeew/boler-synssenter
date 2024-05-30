@@ -2,7 +2,7 @@ export default function About() {
   return (
     <>
       <h1 className="my-10">Om oss</h1>
-      <div className="w-full max-w-[1750px] flex flex-col gap-14 px-4 pb-20 md:px-10 md:pb-28 md:flex-row">
+      <div className="w-full max-w-[1460px] flex flex-col gap-14 px-4 pb-20 md:px-10 md:pb-28 md:flex-row">
         <div className="grid gap-8  w-full ">
           <section className="bg-lightBlue flex flex-col items-center py-8 rounded-xl">
             <h2>Åpningstider</h2>
