@@ -1,6 +1,6 @@
-const articles = {
-  name: "article",
-  title: "Articles",
+const projects = {
+  name: "project",
+  title: "Projects",
   type: "document",
   fields: [
     {
@@ -28,12 +28,10 @@ const articles = {
         },
       ],
     },
-
     {
-      name: "intro",
-      title: "Intro",
-      type: "array",
-      of: [{ type: "block" }],
+      name: "url",
+      title: "URL",
+      type: "url",
     },
     {
       name: "content",
@@ -44,4 +42,4 @@ const articles = {
   ],
 };
 
-export default articles;
+export default projects;

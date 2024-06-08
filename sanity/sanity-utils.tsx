@@ -1,7 +1,6 @@
 import { createClient, groq } from "next-sanity";
-import { Project } from "../types/Project";
 
-export async function getProjects() {
+export async function getData() {
   const client = createClient({
     projectId: "w7pqyox8",
     dataset: "production",
@@ -9,5 +8,18 @@ export async function getProjects() {
     useCdn: false,
   });
 
-  return await client.fetch(`*[_type == "project"]`);
+  return await client.fetch(
+    `
+  *[_type == "article"]
+{
+  _id,
+  _createdAt,
+  name,
+  "slug": slug.current,
+  "image": image.asset -> url,
+  intro,
+  content
+}
+  `
+  );
 }
