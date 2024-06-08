@@ -2,8 +2,8 @@ import BolerLogo from "./bolerLogo";
 
 export default function Footer() {
   return (
-    <footer className="bg-darkPurple text-lightBlue px-4 py-20 flex flex-col gap-12 wave lg:px-16">
-      <BolerLogo />
+    <footer className="bg-darkPurple text-lightBlue px-4 py-20 grid gap-12 wave md:grid-cols-2 md:px-10 lg:px-16">
+      {/* <BolerLogo /> */}
       <div className="flex flex-col gap-5">
         <h3>Åpningstider</h3>
         <div className="flex flex-col gap-3">
@@ -32,6 +32,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className="flex gap-2 items-center">
         <p>Design og nettside av</p>
         <a href="https://www.mathildeelinor.no" className="underline">
