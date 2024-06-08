@@ -18,7 +18,6 @@ export async function getData() {
   "slug": slug.current,
   "image": image.asset -> url,
   intro,
-  content
 }
   `
   );

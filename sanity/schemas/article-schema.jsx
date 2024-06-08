@@ -28,7 +28,6 @@ const articles = {
         },
       ],
     },
-
     {
       name: "intro",
       title: "Intro",
