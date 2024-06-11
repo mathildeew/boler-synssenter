@@ -18,6 +18,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "sanity/schemas/projects-schema.jsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "sanity/schemas/projects-schema.jsx", "sanity/schemas/article-schema.jsx"],
   "exclude": ["node_modules"]
 }

@@ -1,13 +1,14 @@
 // "use client";
 // import { useState } from "react";
-import { getData } from "../../../sanity/sanity-utils";
+import { getDocuments } from "../../../sanity/sanity-utils";
 
 import RenderNews from "../Home/RenderNews";
 
 export default async function News() {
   // const [hover, setHover] = useState(false);
 
-  const articles = await getData();
+  // const articles = await getData();
+  const articles = getDocuments();
 
   return (
     <>

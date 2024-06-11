@@ -5,12 +5,11 @@ import { PortableText } from "next-sanity";
 
 export default function RenderNews(data) {
   const { data: articles } = data;
-
   console.log(articles);
 
   return (
     <div className="max-w-[1460px] grid gap-6 grid-cols-news overflow-auto scroll-snap-mandatory  gridExpand:grid-cols-2 md:gap-6 lg:grid-cols-4">
-      {articles.map((article) => (
+      {/* {articles.map((article) => (
         <Link key={article._id} href={`/artikler/${article.slug}`}>
           <div className="flex flex-col gap-3 snap-center">
             <div className="overflow-hidden rounded-3xl">
@@ -20,7 +19,7 @@ export default function RenderNews(data) {
             <PortableText value={article.intro}></PortableText>
           </div>
         </Link>
-      ))}
+      ))} */}
     </div>
   );
 }

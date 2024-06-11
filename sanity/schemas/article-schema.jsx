@@ -14,7 +14,6 @@ const articles = {
       type: "slug",
       options: { source: "name" },
     },
-
     {
       name: "image",
       title: "Image",
