@@ -12,7 +12,7 @@ export async function getDocuments() {
     `
     * [_type == "article"]{
       _id,
-      _createdAt,
+      _updatedAt,
       "slug": slug.current,
       "image": image.asset -> url,
       name,
