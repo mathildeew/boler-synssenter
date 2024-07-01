@@ -8,7 +8,7 @@ export default async function News() {
   // const [hover, setHover] = useState(false);
 
   // const articles = await getData();
-  const articles = getDocuments();
+  const articles = await getDocuments();
 
   return (
     <>

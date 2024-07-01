@@ -11,23 +11,15 @@ export async function getDocuments() {
   const documents = await client.fetch(
     `
     * [_type == "article"]{
-      _id
+      _id,
+      _createdAt,
+      "slug": slug.current,
+      "image": image.asset -> url,
+      name,
+      intro,
+      content
     }`
   );
 
   return documents;
 }
-
-//   return await client.fetch(
-//   `*[_type == "article"]
-//     {
-//   _id,
-//   _createdAt,
-//   name,
-//   // "slug": slug.current,
-//   // "image": image.asset -> url,
-//   // intro,
-//   // content
-// }
-//   `
-//   );
