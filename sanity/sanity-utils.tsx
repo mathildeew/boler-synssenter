@@ -23,3 +23,20 @@ export async function getDocuments() {
 
   return documents;
 }
+
+export async function getDocument(slug) {
+  const document = await client.fetch(
+    `
+    *[_type == "article" && slug.current == "${slug}"][0]{
+      _id,
+      _updatedAt,
+      "slug": slug.current,
+      "image": image.asset -> url,
+      name,
+      intro,
+      content
+    }`
+  );
+
+  return document;
+}
