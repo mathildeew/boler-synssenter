@@ -6,11 +6,14 @@ export default async function Article({ params }) {
 
   const article = await getDocument(slug);
   console.log(article);
+
   return (
     <section className="max-w-[1460px] px-4 py-16 md:px-10 md:py-28">
-      <h1>{article.name}</h1>
-      <PortableText value={article.intro} />
-      <img src={article.image} alt={article.name} />
+      <div className="flex flex-col gap-6">
+        <h1>{article.name}</h1>
+        <PortableText value={article.intro} />
+        <img src={article.image} alt={article.name} />
+      </div>
       <PortableText value={article.content} />
     </section>
   );
