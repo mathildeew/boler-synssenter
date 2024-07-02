@@ -36,7 +36,9 @@
     --size: 12px;
     --R: calc(var(--size) * 1.28);
 
-    -webkit-mask: radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%, radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
+    -webkit-mask:
+      radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+      radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
   }
 
   footer #logo {
@@ -46,13 +48,11 @@
   }
 
   h1 {
-    @apply font-serif;
-    font-size: 36px;
-    text-align: center;
+    @apply text-5xl text-center font-serif;
   }
 
   h2 {
-    @apply text-3xl font-sans font-medium mb-4 md:text-4xl;
+    @apply text-3xl font-sans font-medium mb-4 md:text-2xl;
   }
 
   p {
@@ -62,7 +62,7 @@
 
   p,
   a {
-    font-size: 18px;
+    @apply text-base;
   }
 
   p,
@@ -72,8 +72,7 @@
   }
 
   h3 {
-    font-size: 23px;
-    font-weight: 500;
+    @apply text-xl font-semibold;
   }
 
   nav a {
