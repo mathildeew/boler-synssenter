@@ -25,16 +25,17 @@ export default function Header() {
 
           <nav className={`bg-white translate-all ease-in-out duration-700 z-10 hidden lg:inline`}>
             <div className="flex flex-row gap-10 items-center h-full">
-              <Link href="/synsundersokelse" data-animate-in="true" data-animation-order="1">
-                Synsundersøkelse
+              <Link href="vaare-tjenester" data-animate-in="true" data-animation-order="1">
+                Våre tjenester
               </Link>
-              <Link href="/kontakt-oss" data-animate-in="true" data-animation-order="2">
-                Kontakt oss
+              <Link href="bestill-time" data-animate-in="true" data-animation-order="2">
+                Bestill time
               </Link>
-              <Link href="/om-oss" data-animate-in="true" data-animation-order="3">
+
+              <Link href="om-oss" data-animate-in="true" data-animation-order="3">
                 Om oss
               </Link>
-              <Link href="/aktuelt" data-animate-in="true" data-animation-order="4">
+              <Link href="aktuelt" data-animate-in="true" data-animation-order="4">
                 Aktuelt
               </Link>
               <a className="bg-lightPurple rounded-full px-8 py-2 w-fit" data-animate-in="true" data-animation-order="5">
