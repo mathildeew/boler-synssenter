@@ -11,7 +11,7 @@ export default function RenderNews(data) {
     <div className="max-w-[1460px] grid gap-6 grid-cols-news overflow-auto scroll-snap-mandatory gridExpand:grid-cols-2 md:gap-6 lg:grid-cols-4">
       {articles.map((article) => (
         <Link key={article._id} href={`/aktuelt/${article.slug}`}>
-          <div className="flex flex-col gap-3 snap-center">
+          <div className="text-darkPurple flex flex-col gap-3 snap-center">
             <div className="overflow-hidden rounded-3xl">
               <img className="w-96 h-72 object-cover transition-all ease-in-out duration-300" src={article.image} alt={article.name} />
             </div>
