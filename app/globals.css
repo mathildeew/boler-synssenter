@@ -30,7 +30,7 @@
     stroke: theme(colors.darkPurple);
   }
 
-  footer {
+  .footerContainer {
     margin-top: auto;
 
     --size: 12px;
