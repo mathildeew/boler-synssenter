@@ -10,8 +10,9 @@ export default function Header() {
     <>
       <header className="relative lg:flex lg:justify-between z-20">
         <div className="bg-white w-full h-20 max-w-[1460px] px-4 mx-auto flex items-center justify-between lg:z-auto lg:w-full lg:h-32 lg:px-10">
-          <Link href="/">
+          <Link href="/" className="flex flex-col gap-1 items-center">
             <BolerLogo />
+            <span className="text-darkPurple font-medium uppercase tracking-wider hidden lg:inline">Bøler Synssenter</span>
           </Link>
 
           <div className="flex items-center gap-2 lg:hidden" onClick={() => setOpenMenu(!openMenu)} aria-label="Open and close the menu">
