@@ -55,14 +55,10 @@
     @apply text-3xl font-sans font-medium md:text-2xl;
   }
 
-  p {
-    line-height: 30px;
-    font-weight: 400;
-  }
-
   p,
   a {
-    @apply text-base;
+    font-size: 16px;
+    line-height: 30px;
   }
 
   p,
@@ -145,7 +141,7 @@
   }
 
   .baseButton {
-    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-6 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
+    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-8 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
   img {
@@ -155,5 +151,15 @@
 
   .CMS {
     background: center/cover no-repeat url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
+  }
+
+  /* MEDIA */
+
+  @media (min-width: 768px) {
+    p,
+    a {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 }
