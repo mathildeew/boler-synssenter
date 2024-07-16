@@ -5,10 +5,8 @@ import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-
 export default function Contact() {
   return (
     <section className="bg-lightBlue w-full flex flex-col items-center gap-10">
-      <div className="max-w-[1460px] flex flex-col gap-20 lg:flex-row">
-        <div className="flex flex-col gap-12 p-8 rounded-xl  ">
-          <h2 className="text-center">Kontakt oss</h2>
-
+      <div className="max-w-[1460px] flex flex-col gap-20 py-16 md:py-28 lg:flex-row">
+        <div className="text-darkPurple flex flex-col gap-12 p-8">
           <div className="flex flex-col gap-2">
             <div className="flex gap-3 items-center">
               <FontAwesomeIcon icon={faClock} size="xl" />
@@ -40,7 +38,7 @@ export default function Contact() {
           </Link>
         </div>
 
-        <div className="w-full h-96 md:h-auto">
+        <div className="w-full h-96 px-2 lg:h-auto">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.977325547998!2d10.842735977093179!3d59.882725774887035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416f67a3530de5%3A0x102585b627075bb2!2sC)Optikk!5e0!3m2!1sno!2sno!4v1716321840745!5m2!1sno!2sno" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
