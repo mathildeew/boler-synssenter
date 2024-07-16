@@ -19,10 +19,13 @@
   }
 
   main {
+    background-color: theme(colors.lightBeige);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
+
+  /* GLOBALS - - - - - - - - - - */
 
   h1 {
     @apply text-5xl text-center font-serif;
