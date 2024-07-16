@@ -24,29 +24,6 @@
     flex-direction: column;
   }
 
-  header #logo {
-    width: auto;
-    height: 19.5px;
-    stroke: theme(colors.darkPurple);
-  }
-
-  .footerContainer {
-    margin-top: auto;
-
-    --size: 12px;
-    --R: calc(var(--size) * 1.28);
-
-    -webkit-mask:
-      radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
-      radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
-  }
-
-  footer #logo {
-    width: 100px;
-    height: auto;
-    stroke: theme(colors.lightBlue);
-  }
-
   h1 {
     @apply text-5xl text-center font-serif;
   }
@@ -71,15 +48,53 @@
     @apply text-xl font-semibold;
   }
 
-  nav a {
-    @apply font-sans tracking-wider hover:underline hover:underline-offset-2;
-    font-size: 20px;
+  .scroll-snap-mandatory {
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
-  .hamburger {
-    @apply bg-darkPurple w-full h-[2px] absolute transition-all ease-in-out duration-1000;
+  .baseButton {
+    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-8 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .CMS {
+    background: center/cover no-repeat url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
+  }
+
+  /* HEADER - - - - - - - - - - */
+  header #logo {
+    width: auto;
+    height: 19.5px;
+    stroke: theme(colors.darkPurple);
+  }
+
+  /* FOOTER - - - - - - - - - - */
+  .footerContainer {
+    margin-top: auto;
+
+    --size: 12px;
+    --R: calc(var(--size) * 1.28);
+
+    -webkit-mask:
+      radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+      radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
+  }
+
+  footer #logo {
+    width: 100px;
+    height: auto;
+    stroke: theme(colors.lightBlue);
+  }
+
+  /* ANIMATIONS - - - - - - - - - - */
   @keyframes animate-in-from-bottom {
     0% {
       transform: translateY(15px);
@@ -132,29 +147,7 @@
     animation-delay: 0.5s;
   }
 
-  .scroll-snap-mandatory {
-    scroll-snap-type: x mandatory;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .baseButton {
-    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-8 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .CMS {
-    background: center/cover no-repeat url("/marissa-rodriguez-2mKYEVGA4jE-unsplash.jpg");
-  }
-
-  /* MEDIA */
-
+  /* MEDIA QUERIES - - - - - - - - - -*/
   @media (min-width: 768px) {
     p,
     a {

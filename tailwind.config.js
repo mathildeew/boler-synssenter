@@ -21,6 +21,15 @@ module.exports = {
       screens: {
         gridExpand: "600px",
       },
+      animation: {
+        inFromBottom: "inFromBottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+      },
+      keyframes: {
+        inFromBottom: {
+          from: { transform: "translateY(15px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],

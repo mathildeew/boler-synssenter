@@ -1,76 +1,99 @@
 "use client";
-import Link from "next/link";
+
 import { useState } from "react";
+import { useLockBodyScroll, useToggle } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faL, faLongArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 import BolerLogo from "./BolerLogo";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [locked, toogleLocked] = useToggle(false);
+
+  useLockBodyScroll(locked);
 
   return (
     <>
-      <header className="relative lg:flex lg:justify-between z-20">
-        <div className="bg-white w-full h-16 max-w-[1460px] mx-auto flex items-center justify-between px-4 lg:z-auto lg:w-full lg:px-10">
-          <div className="hidden lg:flex w-full justify-end items-center gap-4">
-            <FontAwesomeIcon icon={faLongArrowRight} />
-            <a>Kunde? Bestill kontaktlinser</a>
-          </div>
-
-          <Link href="/" className="flex flex-col gap-1 items-center">
+      <header>
+        <div className="bg-lightBeige w-full flex items-center justify-between px-4 pt-5 pb-4 relative z-20 lg:hidden">
+          <Link href="/" className="flex flex-col items-center gap-1">
             <BolerLogo />
-            <span className="text-darkPurple font-medium uppercase tracking-wider hidden lg:inline">Bøler Synssenter</span>
+            <span className="text-darkPurple font-medium uppercase tracking-wider">Bøler Synssenter</span>
           </Link>
 
-          <div className="flex items-center gap-2 lg:hidden" onClick={() => setOpenMenu(!openMenu)} aria-label="Open and close the menu">
-            <span className="uppercase text-sm">{openMenu ? "Lukk" : "Meny"}</span>
-            <div className="w-7 h-7 relative">
-              <span className={`hamburger top-1 ${openMenu && "rotate-45 translate-y-2"}`}></span>
-              <span className={`hamburger top-3 ${openMenu && "opacity-0"}`}></span>
-              <span className={`hamburger top-5 ${openMenu && "-rotate-45 -translate-y-2"}`}></span>
+          <div
+            className="flex items-center gap-2 "
+            onClick={() => {
+              toogleLocked(), setOpenMenu(!openMenu);
+            }}
+            aria-label="Open and close the menu"
+          >
+            <span className="text-darkPurple text-sm uppercase">{openMenu ? "Lukk" : "Meny"}</span>
+            <div className="w-7 h-5 relative">
+              <span className={`bg-darkPurple w-full h-0.5 absolute transition-all ease-in-out duration-300 top-0 ${openMenu && "rotate-45 translate-y-2"}`}></span>
+              <span className={`bg-darkPurple w-full h-0.5 absolute transition-all ease-in-out duration-300 top-2 ${openMenu && "opacity-0"}`}></span>
+              <span className={`bg-darkPurple w-full h-0.5 absolute transition-all ease-in-out duration-300 top-4 ${openMenu && "-rotate-45 -translate-y-2"}`}></span>
             </div>
           </div>
-
-          <nav className={`bg-white translate-all ease-in-out duration-700 z-10 hidden lg:inline`}>
-            <div className="flex flex-row gap-10 items-center h-full">
-              <Link href="vaare-tjenester" data-animate-in="true" data-animation-order="1">
-                Våre tjenester
-              </Link>
-              <Link href="bestill-time" data-animate-in="true" data-animation-order="2">
-                Bestill time
-              </Link>
-
-              <Link href="om-oss" data-animate-in="true" data-animation-order="3">
-                Om oss
-              </Link>
-              <Link href="aktuelt" data-animate-in="true" data-animation-order="4">
-                Aktuelt
-              </Link>
-              {/* <a className="bg-lightPurple rounded-full px-8 py-2 w-fit" data-animate-in="true" data-animation-order="5">
-                Bestill kontaktlinser
-              </a> */}
-            </div>
-          </nav>
         </div>
+
+        <nav className={`text-darkPurple bg-lightBeige w-full h-screen absolute z-10 lg:hidden ${openMenu ? "visible" : "hidden"}`}>
+          <div className="flex flex-col items-center gap-12 py-16">
+            <Link href="/synsundersokelse" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+              Synsundersøkelse
+            </Link>
+            <Link href="/aktuelt" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+              Aktuelt
+            </Link>
+            <Link href="/om-oss" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+              Om oss
+            </Link>
+            <Link href="/kontakt-oss" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
+              Kontakt oss
+            </Link>
+            <a href="https://www.coptikk.no/linsebutikk" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="5">
+              Tom for linser? Bestill kontaktlinser
+            </a>
+          </div>
+        </nav>
       </header>
 
-      <nav className={`bg-white w-full absolute translate-all ease-in-out duration-700 z-10 lg:inline lg:translate-y-0 lg:relative lg:w-auto ${openMenu ? "top-20 h-screen" : "-top-[400px] h-20 lg:h-auto"}`}>
-        <div className="flex flex-col items-end gap-12 px-4 py-12 lg:hidden">
-          <Link href="/synsundersokelse" className="px-6">
-            Synsundersøkelse
-          </Link>
-          <Link href="/aktuelt" className="px-6">
-            Aktuelt
-          </Link>
-          <Link href="/om-oss" className="px-6">
-            Om oss
-          </Link>
-          <Link href="/kontakt-oss" className="px-6">
-            Kontakt oss
-          </Link>
-          <a className="bg-lightPurple rounded-full px-6 py-2 w-fit">Bestill kontaktlinser</a>
+      <header className="bg-lightBeige w-full hidden lg:inline-block">
+        <div className="w-full max-w-[1460px] flex flex-col items-center justify-between mx-auto px-10 py-4">
+          <div className="text-darkPurple w-full flex justify-end items-center gap-4" data-animate-in="true" data-animation-order="5">
+            <FontAwesomeIcon icon={faArrowRightLong} />
+            <a href="https://www.coptikk.no/linsebutikk" className=" text-xl font-sans tracking-wider hover:underline hover:underline-offset-2">
+              Tom for linser? Bestill kontaktlinser
+            </a>
+          </div>
+
+          <div className="w-full flex items-end justify-between">
+            <Link href="/" className="flex flex-col gap-1 items-center">
+              <BolerLogo />
+              <span className="text-darkPurple font-medium uppercase tracking-wider hidden lg:inline">Bøler Synssenter</span>
+            </Link>
+
+            <nav>
+              <div className="flex flex-row gap-10 items-center">
+                <Link href="vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+                  Våre tjenester
+                </Link>
+                <Link href="bestill-time" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+                  Bestill time
+                </Link>
+
+                <Link href="om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+                  Om oss
+                </Link>
+                <Link href="aktuelt" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
+                  Aktuelt
+                </Link>
+              </div>
+            </nav>
+          </div>
         </div>
-      </nav>
+      </header>
     </>
   );
 }
