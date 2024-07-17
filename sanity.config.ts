@@ -1,5 +1,7 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
+import { structureTool } from "sanity/structure";
+import { myStructure } from "./deskStructure";
 import schemas from "./sanity/schemas";
 
 const config = defineConfig({
@@ -8,7 +10,12 @@ const config = defineConfig({
   title: "Bøler Synssenter",
   apiVersion: "2024-06-08",
   basePath: "/admin",
-  plugins: [deskTool()],
+  plugins: [
+    // deskTool(),
+    structureTool({
+      structure: myStructure,
+    }),
+  ],
   schema: { types: schemas },
 });
 
