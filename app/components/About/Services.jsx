@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <section className="w-full max-w-[1460px] bg-lightPurple text-darkPurple grid gap-10 items-center rounded-xl px-4 py-16 md:px-10 md:py-28">
+    <section className=" bg-lightPurple text-darkPurple flex flex-col items-center gap-10 rounded-xl ,x-4 px-4 py-16 md:px-10 md:py-16">
       <h2 className="text-5xl text-center font-serif">Våre tjenester</h2>
-      <div className="bg-white w-full flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-12">
-        <div className="w-full flex flex-col items-center gap-4   sm:w-40">
+      <div className="bg-white flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-12">
+        <div className="w-full flex flex-col items-center gap-4 sm:w-40">
           <div className="bg-lightBeige w-28 h-28 flex items-center justify-center rounded-full">
             <img src="/icons/synsundersokelse.svg" className="w-16" />
           </div>
@@ -41,7 +41,7 @@ export default function Services() {
         </div>
       </div>
 
-      <Link href="/vaare-tjenester" className="baseButton text-lightBeige ">
+      <Link href="/vaare-tjenester" className="baseButton text-lightBeige">
         Les mer om våre tjenester
       </Link>
     </section>

@@ -5,7 +5,7 @@ import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-
 export default function Contact() {
   return (
     <section className="bg-lightBlue w-full flex flex-col items-center gap-10">
-      <div className="max-w-[1460px] flex flex-col gap-20 py-16 md:py-28 lg:flex-row">
+      <div className="max-w-[1460px] flex flex-col gap-20 py-16 lg:flex-row">
         <div className="text-darkPurple flex flex-col gap-12 p-8">
           <div className="flex flex-col gap-2">
             <div className="flex gap-3 items-center">

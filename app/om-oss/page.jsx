@@ -8,7 +8,7 @@ export default function About() {
       <h1 className="text-darkPurple my-10">Om oss</h1>
       <div className="w-full flex flex-col items-center gap-20">
         <Info />
-        <Services />
+        {/* <Services /> */}
         <Contact />
       </div>
     </>
