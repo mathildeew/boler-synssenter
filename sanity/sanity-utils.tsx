@@ -24,6 +24,21 @@ export async function getDocuments() {
   return documents;
 }
 
+export async function getInfo() {
+  const info = await client.fetch(
+    `
+    * [_type == "siteSettings" && title == "Bøler Synssenter"][0]{
+      address,
+      openingHours,
+      mail,
+      phone,
+      title
+    }
+    `
+  );
+  return info;
+}
+
 export async function getDocument(slug) {
   const document = await client.fetch(
     `

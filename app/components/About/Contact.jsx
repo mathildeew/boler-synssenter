@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-icons";
+import { getInfo } from "../../../sanity/sanity-utils";
 
-export default function Contact() {
+export default async function Contact() {
+  const info = await getInfo();
+  const { address, phone, mail, openingHours } = info;
+
   return (
     <section className="bg-lightBlue w-full">
       <div className="max-w-[1460px] flex flex-col  gap-20 py-16 mx-auto lg:flex-row">
@@ -13,8 +17,8 @@ export default function Contact() {
               <h3>Åpningstider</h3>
             </div>
             <div className="flex flex-col">
-              <p>Mandag - fredag: 10.00 - 19.00</p>
-              <p>Lørdag: 10.00 - 18.00</p>
+              <p>Mandag - fredag: {openingHours.manToFre}</p>
+              <p>Lørdag: {openingHours.sat}</p>
             </div>
           </div>
 
@@ -31,7 +35,9 @@ export default function Contact() {
               <FontAwesomeIcon icon={faComments} size="xl" />
               <h3>Ta kontakt med oss direkte</h3>
             </div>
-            <p>Send oss en e-post på post@bolersynssenter.no, så tar vi kontakt så fort vi kan. Du kan også ringe oss på 22 26 22 68.</p>
+            <p>
+              Send oss en e-post på {mail}, så tar vi kontakt så fort vi kan. Du kan også ringe oss på {phone}.
+            </p>
           </div>
           <Link href="/synsundersokelse" className="baseButton text-lightBlue mx-auto ">
             Bestill synsundersøkelse
@@ -39,7 +45,7 @@ export default function Contact() {
         </div>
 
         <div className="w-full h-96 px-2 lg:h-auto">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.977325547998!2d10.842735977093179!3d59.882725774887035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416f67a3530de5%3A0x102585b627075bb2!2sC)Optikk!5e0!3m2!1sno!2sno!4v1716321840745!5m2!1sno!2sno" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.977325547998!2d10.842735977093179!3d59.882725774887035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416f67a3530de5%3A0x102585b627075bb2!2sC)Optikk!5e0!3m2!1sno!2sno!4v1716321840745!5m2!1sno!2sno" width="100%" height="100%" loading="lazy"></iframe>
         </div>
       </div>
     </section>

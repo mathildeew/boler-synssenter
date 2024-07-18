@@ -1,7 +1,6 @@
 // "use client";
 // import { useState } from "react";
 import { getDocuments } from "../../../sanity/sanity-utils";
-
 import RenderNews from "../Home/RenderNews";
 
 export default async function News() {

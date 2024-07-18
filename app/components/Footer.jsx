@@ -1,6 +1,10 @@
+import { getInfo } from "../../sanity/sanity-utils";
 import BolerLogo from "./bolerLogo";
 
-export default function Footer() {
+export default async function Footer() {
+  const info = await getInfo();
+  const { address, phone, mail, openingHours } = info;
+
   return (
     <footer className="bg-lightBlue w-full">
       <div className="footerContainer bg-darkPurple flex justify-center px-4 py-16 md:px-10 md:py-28 lg:px-16">
@@ -11,11 +15,11 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <div>
                 <p>Mandag - fredag:</p>
-                <p>10.00 - 19.00</p>
+                <p>{openingHours.manToFre}</p>
               </div>
               <div>
                 <p>Lørdag:</p>
-                <p>10.00 - 18.00</p>
+                <p>{openingHours.sat}</p>
               </div>
             </div>
           </div>
@@ -24,13 +28,12 @@ export default function Footer() {
             <h3>Kontakt oss</h3>
             <div className="flex flex-col gap-3">
               <div>
-                <p>22 26 22 68</p>
-                <a href="mailto:post@bolersynssenter.no">post@bolersynssenter.no</a>
+                <p>{phone}</p>
+                <a href={`mailto:${mail}`}>{mail}</a>
               </div>
               <div>
-                <p>Bøler Synssenter</p>
-                <p>Utmarkveien 1</p>
-                <p>0689 Oslo</p>
+                <p>{address.street}</p>
+                <p>{address.city}</p>
               </div>
             </div>
           </div>

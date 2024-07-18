@@ -9,7 +9,7 @@ const siteSettings = {
       type: "string",
     },
     {
-      name: "addresse",
+      name: "address",
       title: "Adresse",
       type: "object",
       fields: [
@@ -31,7 +31,7 @@ const siteSettings = {
       validation: (rule) => [rule.required().email()],
     },
     {
-      name: "hours",
+      name: "openingHours",
       title: "Åpningstider",
       type: "object",
       fields: [
