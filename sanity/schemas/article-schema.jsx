@@ -1,7 +1,10 @@
+import { BookIcon } from "@sanity/icons";
+
 const articles = {
   name: "article",
   title: "Articles",
   type: "document",
+  icon: BookIcon,
   fields: [
     {
       name: "name",
