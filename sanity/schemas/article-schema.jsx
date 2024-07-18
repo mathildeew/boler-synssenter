@@ -2,7 +2,7 @@ import { BookIcon } from "@sanity/icons";
 
 const articles = {
   name: "article",
-  title: "Articles",
+  title: "Nyheter",
   type: "document",
   icon: BookIcon,
   fields: [
@@ -26,6 +26,7 @@ const articles = {
         {
           name: "alt",
           title: "Alt",
+          description: "Enkel beskrivelse av bildet",
           type: "string",
         },
       ],
@@ -33,14 +34,16 @@ const articles = {
     {
       name: "intro",
       title: "Intro",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "text",
+      description: "Kort intro om artikkelen",
+      rows: 4,
+      validation: (rule) => [rule.max(125).error("Må være mindre enn 125 tegn")],
     },
     {
       name: "content",
-      title: "Content",
+      title: "Innhold",
       type: "array",
-      of: [{ type: "block" }],
+      of: [{ type: "block" }, { type: "image" }],
     },
   ],
 };

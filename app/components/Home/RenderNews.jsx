@@ -15,7 +15,7 @@ export default function RenderNews(data) {
               <img className="w-96 h-72 object-cover transition-all ease-in-out duration-300" src={article.image} alt={article.name} />
             </div>
             <h3>{article.name}</h3>
-            <PortableText value={article.intro} />
+            <p>{article.intro}</p>
           </div>
         </Link>
       ))}

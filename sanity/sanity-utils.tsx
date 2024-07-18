@@ -7,23 +7,6 @@ export const client = createClient({
   useCdn: false,
 });
 
-export async function getDocuments() {
-  const documents = await client.fetch(
-    `
-    * [_type == "article"]{
-      _id,
-      _updatedAt,
-      "slug": slug.current,
-      "image": image.asset -> url,
-      name,
-      intro,
-      content
-    }`
-  );
-
-  return documents;
-}
-
 export async function getInfo() {
   const info = await client.fetch(
     `
@@ -32,24 +15,40 @@ export async function getInfo() {
       openingHours,
       mail,
       phone,
-      title
+      title,
     }
     `
   );
   return info;
 }
 
-export async function getDocument(slug) {
+export async function getDocuments() {
+  const documents = await client.fetch(
+    `
+    *[_type == "article"]{
+      _id,
+      name,
+      intro,
+      "slug": slug.current,
+      "image": image.asset -> url,
+      content
+    }`
+  );
+
+  return documents;
+}
+
+export async function getDocument(slug: any) {
   const document = await client.fetch(
     `
-    *[_type == "article" && slug.current == "${slug}"][0]{
+    * [_type == "article" && slug.current == "${slug}"][0]{
       _id,
       _updatedAt,
       "slug": slug.current,
       "image": image.asset -> url,
       name,
       intro,
-      content
+      content,
     }`
   );
 

@@ -76,17 +76,17 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
-                <Link href="vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+                <Link href="/vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
                   Våre tjenester
                 </Link>
-                <Link href="bestill-time" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+                <Link href="/bestill-time" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
                   Bestill time
                 </Link>
 
-                <Link href="om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+                <Link href="/om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
                   Om oss
                 </Link>
-                <Link href="aktuelt" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
+                <Link href="/aktuelt" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
                   Aktuelt
                 </Link>
               </div>

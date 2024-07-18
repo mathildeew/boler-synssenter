@@ -16,7 +16,7 @@ export default async function Aktuelt() {
                 <img className="w-full h-72 object-cover transition-all ease-in-out duration-300" src={article.image} alt={article.name} />
               </div>
               <h3>{article.name}</h3>
-              <PortableText value={article.intro}></PortableText>
+              <p>{article.intro}</p>
             </div>
           </Link>
         ))}
