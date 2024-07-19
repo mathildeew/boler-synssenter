@@ -17,7 +17,7 @@ export const richTextComponents = {
     number: ({ children }) => <ol className="list-decimal ml-3">{children}</ol>,
   },
   text: {
-    text: ({ children }) => <p className="text-4xl font-sans text-left font-semibold">{children}</p>,
+    p: ({ children }) => <p className="text-4xl font-sans text-left font-semibold mb-12">{children}</p>,
   },
 
   block: {

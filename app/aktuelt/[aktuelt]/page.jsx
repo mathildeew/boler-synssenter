@@ -1,24 +1,12 @@
 import { PortableText } from "@portabletext/react";
-import { groq } from "next-sanity";
-import { getDocument } from "../../../sanity/sanity-utils";
+import { useAPI } from "../../../sanity/sanity-utils";
 import { urlFor } from "../../../sanity/urlFor";
 import { richTextComponents } from "../../components/RichTextComponents";
+import apiQueries from "../../../sanity/apiQueries";
 
 export default async function Article({ params }) {
   const slug = params.aktuelt;
-  const query = `
-  *[_type == "article" && slug.current == "${slug}"][0]{
-    _id,
-    _updatedAt,
-    "slug": slug.current,
-    image,
-    name,
-    intro,
-    content
-  }
-  `;
-
-  const article = await getDocument(query);
+  const article = await useAPI(apiQueries(slug).article);
 
   return (
     <article className="flex flex-col items-center gap-12 px-4 py-16 md:px-10 md:py-28">

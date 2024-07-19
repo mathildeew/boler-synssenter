@@ -1,13 +1,14 @@
 // "use client";
 // import { useState } from "react";
-import { getDocuments } from "../../../sanity/sanity-utils";
+import { useAPI } from "../../../sanity/sanity-utils";
+import apiQueries from "../../../sanity/apiQueries";
 import RenderNews from "../Home/RenderNews";
 
 export default async function News() {
   // const [hover, setHover] = useState(false);
 
-  // const articles = await getData();
-  const articles = await getDocuments();
+  const articles = await useAPI(apiQueries().articles);
+
   // Skal kun hente fire første artikler!
 
   return (

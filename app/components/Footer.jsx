@@ -1,8 +1,9 @@
-import { getInfo } from "../../sanity/sanity-utils";
+import { useAPI } from "../../sanity/sanity-utils";
 import BolerLogo from "./bolerLogo";
+import apiQueries from "../../sanity/apiQueries";
 
 export default async function Footer() {
-  const info = await getInfo();
+  const info = await useAPI(apiQueries().info);
   const { address, phone, mail, openingHours } = info;
 
   return (

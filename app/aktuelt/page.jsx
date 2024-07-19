@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { PortableText } from "next-sanity";
-import { getDocuments } from "../../sanity/sanity-utils";
+import { useAPI } from "../../sanity/sanity-utils";
+import apiQueries from "../../sanity/apiQueries";
 
 export default async function Aktuelt() {
-  const articles = await getDocuments();
+  const articles = await useAPI(apiQueries().articles);
 
   return (
     <>

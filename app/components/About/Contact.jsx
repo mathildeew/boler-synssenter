@@ -1,10 +1,20 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-icons";
-import { getInfo } from "../../../sanity/sanity-utils";
+import { useAPI } from "../../../sanity/sanity-utils";
 
 export default async function Contact() {
-  const info = await getInfo();
+  const query = `
+  *[_type == "siteSettings" && title == "Bøler Synssenter"][0]{
+    address,
+    openingHours,
+    mail,
+    phone,
+    title,
+  }
+  `;
+
+  const info = await useAPI(query);
   const { address, phone, mail, openingHours } = info;
 
   return (
