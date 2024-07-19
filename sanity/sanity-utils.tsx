@@ -25,32 +25,27 @@ export async function getInfo() {
 export async function getDocuments() {
   const documents = await client.fetch(
     `
-    *[_type == "article"]{
+    * [_type == "article"]{
       _id,
       name,
       intro,
       "slug": slug.current,
       "image": image.asset -> url,
-      content
+      // content
     }`
   );
 
   return documents;
 }
 
-export async function getDocument(slug: any) {
-  const document = await client.fetch(
-    `
-    * [_type == "article" && slug.current == "${slug}"][0]{
-      _id,
-      _updatedAt,
-      "slug": slug.current,
-      "image": image.asset -> url,
-      name,
-      intro,
-      content,
-    }`
-  );
+/**
+ * Retrieves API results from Sanity.
+ * 
+ * @param query - groq query of what information needed.
+ * @returns - Returns the API result.
+ */
+export async function getDocument(query: any) {
+  const document = await client.fetch(query);
 
   return document;
 }

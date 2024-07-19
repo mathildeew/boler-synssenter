@@ -19,13 +19,13 @@ const articles = {
     },
     {
       name: "image",
-      title: "Image",
+      title: "Forsidebilde",
       type: "image",
       options: { hotspot: true },
       fields: [
         {
           name: "alt",
-          title: "Alt",
+          title: "Alternativ tekst",
           description: "Enkel beskrivelse av bildet",
           type: "string",
         },
@@ -37,13 +37,31 @@ const articles = {
       type: "text",
       description: "Kort intro om artikkelen",
       rows: 4,
-      validation: (rule) => [rule.max(125).error("Må være mindre enn 125 tegn")],
+      validation: (rule) => [rule.max(160).error("Må være mindre enn 160 tegn")],
     },
     {
       name: "content",
       title: "Innhold",
       type: "array",
-      of: [{ type: "block" }, { type: "image" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Alternativ tekst",
+              description: "Kort beskrivelse av bildet, helst kun et par ord",
+              validation: (rule) => [rule.max(80).error("Må være mindre enn 80 tegn")],
+              rows: 1,
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        },
+      ],
     },
   ],
 };

@@ -36,7 +36,8 @@
   }
 
   p,
-  a {
+  a,
+  li {
     font-size: 16px;
     line-height: 30px;
   }
@@ -153,7 +154,8 @@
   /* MEDIA QUERIES - - - - - - - - - -*/
   @media (min-width: 768px) {
     p,
-    a {
+    a,
+    li {
       font-size: 20px;
       line-height: 32px;
     }
