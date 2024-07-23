@@ -1,13 +1,12 @@
-// "use client";
 import { PortableText } from "@portabletext/react";
 import { useAPI } from "../../../sanity/sanity-utils";
 import { urlFor } from "../../../sanity/urlFor";
-import { richTextComponents } from "../../components/RichTextComponents";
+import { PortableTextComponents } from "../../components/PortableTextComponents";
 import Link from "next/link";
 import apiQueries from "../../../sanity/apiQueries";
 
 export default async function Article({ params }) {
-  const slug = params.aktuelt;
+  const slug = params.slug;
   const article = await useAPI(apiQueries(slug).article);
 
   return (
@@ -21,7 +20,7 @@ export default async function Article({ params }) {
         <img src={urlFor(article.image).url()} alt={article.image.alt} className="max-h-[550px] object-cover object-center rounded-xl" />
       </section>
       <section className="max-w-[700px]">
-        <PortableText value={article.content} components={richTextComponents} />
+        <PortableText value={article.content} components={PortableTextComponents} />
       </section>
     </article>
   );

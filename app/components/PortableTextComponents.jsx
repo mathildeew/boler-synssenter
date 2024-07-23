@@ -1,14 +1,7 @@
-import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
-import { client } from "../../sanity/sanity-utils";
+import { urlFor } from "../../sanity/urlFor";
 
-const builder = imageUrlBuilder(client);
-
-function urlFor(source) {
-  return builder.image(source);
-}
-
-export const richTextComponents = {
+export const PortableTextComponents = {
   types: {
     image: ({ value }) => <img src={urlFor(value).url()} className="w-full rounded-xl mb-12" />,
   },

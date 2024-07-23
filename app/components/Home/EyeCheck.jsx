@@ -8,7 +8,7 @@ export default function EyeCheck() {
         <div className="flex flex-col gap-8 items-center">
           <h1 className="text-5xl text-center font-serif text-darkPurple">Ta vare på synet ditt</h1>
           <p>Å passe på synet er avgjørende for å opprettholde god livskvalitet og forebygge alvorlige øyesykdommer. Regelmessige synsundersøkelser kan avdekke tidlige tegn på problemer som kan behandles før de utvikler seg, og sikre at du alltid har riktig brille- eller kontaktlinsekorreksjon for best mulig syn.</p>
-          <Link href="bestill-time" className="baseButton text-lightBeige ">
+          <Link href="bestill-time" className="baseButton text-lightBeige">
             Bestill time
           </Link>
         </div>
