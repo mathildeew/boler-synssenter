@@ -2,7 +2,7 @@ import { EyeOpenIcon, CogIcon } from "@sanity/icons";
 
 export const myStructure = (S) =>
   S.list()
-    .title("Content")
+    .title("Innhold")
     .items([
       S.listItem()
         .title("Innstillinger")
