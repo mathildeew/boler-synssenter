@@ -1,6 +1,5 @@
-export default function apiQueries(slug) {
-  const query = {
-    info: `
+const apiQueries = (slug) => ({
+  info: `
     *[_type == "siteSettings" && title == "Bøler Synssenter"][0]{
       address,
       openingHours,
@@ -10,17 +9,18 @@ export default function apiQueries(slug) {
     }
     `,
 
-    articles: `
-    *[_type == "article"]{
+  articles: `
+    *[_type == "article"]| order(_createdAt desc){
         _id,
         name,
         intro,
         "slug": slug.current,
         "image": image.asset -> url,
+        _createdAt
       }
       `,
 
-    article: `
+  article: `
     *[_type == "article" && slug.current == "${slug}"][0]{
       _id,
       _updatedAt,
@@ -31,7 +31,6 @@ export default function apiQueries(slug) {
       content
     }
     `,
-  };
+});
 
-  return query;
-}
+export default apiQueries;

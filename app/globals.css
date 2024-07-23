@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 @layer base {
+  /* fjern CMS ved publisering!  */
+
   :root {
     --page-gutter: 24px;
     --grid-gutter: 10px;
@@ -61,16 +63,12 @@
   }
 
   .baseButton {
-    @apply w-fit bg-darkPurple text-lightBlue font-semibold tracking-wider uppercase py-2.5 px-8 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
+    @apply text-lightBlue font-semibold text-center tracking-wider uppercase w-fit bg-darkPurple py-2.5 px-16 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  .CMS {
-    background: center/cover no-repeat url("/alexander-grey-NeRKgBUUDjM-downsized.jpg");
   }
 
   /* HEADER - - - - - - - - - - */

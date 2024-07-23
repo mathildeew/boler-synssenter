@@ -8,26 +8,32 @@ const articles = {
   fields: [
     {
       name: "name",
-      title: "Name",
+      title: "Tittel",
       type: "string",
+      description: "Tittelen på artikkelen.",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
+      description: "Trykk på generate. Denne brukes for å lage riktig link til artikkelen.",
+      validation: (rule) => rule.required(),
       options: { source: "name" },
     },
     {
       name: "image",
       title: "Forsidebilde",
       type: "image",
+      description: "Bildet brukes på landingssiden sammen med introen.",
+      validation: (rule) => rule.required(),
       options: { hotspot: true },
       fields: [
         {
           name: "alt",
           title: "Alternativ tekst",
-          description: "Enkel beskrivelse av bildet",
+          description: "Enkel beskrivelse av bildet.",
           type: "string",
+          validation: (rule) => rule.required(),
         },
       ],
     },
@@ -35,29 +41,27 @@ const articles = {
       name: "intro",
       title: "Intro",
       type: "text",
-      description: "Kort intro om artikkelen",
+      description: "Kort intro om artikkelen. Denne brukes på landingssiden og øverst i artikkelen.",
       rows: 2,
-      validation: (rule) => [rule.max(160).error("Må være mindre enn 160 tegn")],
+      validation: (rule) => [rule.required().max(160).error("Må være mindre enn 160 tegn")],
     },
     {
       name: "content",
       title: "Innhold",
       type: "array",
+      validation: (rule) => rule.required(),
       of: [
         { type: "block" },
         {
           type: "image",
           fields: [
             {
-              type: "text",
               name: "alt",
               title: "Alternativ tekst",
-              description: "Kort beskrivelse av bildet, helst kun et par ord",
-              validation: (rule) => [rule.max(80).error("Må være mindre enn 80 tegn")],
+              type: "text",
+              description: "Kort beskrivelse av bildet, helst kun et par ord.",
+              validation: (rule) => rule.required(),
               rows: 1,
-              options: {
-                isHighlighted: true,
-              },
             },
           ],
         },

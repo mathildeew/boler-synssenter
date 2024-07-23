@@ -7,11 +7,14 @@ const siteSettings = {
       name: "title",
       title: "Butikk",
       type: "string",
+      initialValue: "Bøler Synssenter",
+      readOnly: true,
     },
     {
       name: "address",
       title: "Adresse",
       type: "object",
+      validation: (rule) => rule.required(),
       fields: [
         { name: "street", title: "Gatenavn og nummer", type: "string" },
         { name: "city", title: "Postnummer og sted", type: "string" },
@@ -28,12 +31,13 @@ const siteSettings = {
       name: "mail",
       title: "E-post",
       type: "string",
-      validation: (rule) => [rule.required().email()],
+      validation: (rule) => rule.required().email(),
     },
     {
       name: "openingHours",
       title: "Åpningstider",
       type: "object",
+      validation: (rule) => rule.required(),
       fields: [
         { name: "manToFre", title: "Mandag - fredag", type: "string" },
         { name: "sat", title: "Lørdag", type: "string" },

@@ -1,9 +1,14 @@
+import Link from "next/link";
+
 export default function Services() {
   return (
     <section className="bg-lightPurple w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-28">
       <div className="text-darkPurple text-center max-w-3xl flex flex-col gap-10 items-center">
         <h2 className="text-5xl text-center font-serif text-darkPurple">Vår kunnskap er din trygghet</h2>
         <p>Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell, dedikert til å gi deg best mulig øyehelse. Med høy kompetanse og lang erfaring sørger vi for at du får en profesjonell og trygg opplevelse ved hver synsundersøkelse og konsultasjon. </p>
+        <Link href="/vaare-tjenester" className="baseButton text-lightPurple">
+          Les mer om våre tjenester
+        </Link>
       </div>
 
       <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-12">

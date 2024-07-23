@@ -2,13 +2,16 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="CMS bg-lightBeige w-full h-[500px] flex flex-col justify-end lg:items-end">
-      <div className="bg-lightBlue bg-opacity-70 w-full py-8 flex flex-col justify-center items-center gap-8 px-4 lg:w-[500px] lg:h-full">
-        <h1 className="text-base  md:text-5xl text-center font-serif">Syn og øyehelse - hva er viktig?</h1>
-        <p>Eget innhold fra CMS her? Eller tom for linser?</p>
-        <Link href="/" className="baseButton">
-          Les mer
-        </Link>
+    <section className="w-full flex justify-center px-4 py-16 md:px-10 md:py-28">
+      <div className="max-w-[1460px] grid gap-12 md:grid-cols-2 md:items-center">
+        <img className="object-cover rounded-3xl" src="/alexander-grey-NeRKgBUUDjM-downsized.jpg" />
+        <div className="text-darkPurple flex flex-col gap-10 items-center">
+          <h1 className="">Ta vare på synet ditt</h1>
+          <span className="text-2xl">Å passe på synet er avgjørende for å opprettholde god livskvalitet og forebygge alvorlige øyesykdommer</span>
+          <Link href="bestill-time" className="baseButton text-lightBeige">
+            Bestill time
+          </Link>
+        </div>
       </div>
     </section>
   );
