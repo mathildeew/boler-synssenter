@@ -17,7 +17,6 @@ export default function apiQueries(slug) {
         intro,
         "slug": slug.current,
         "image": image.asset -> url,
-        // content
       }
       `,
 

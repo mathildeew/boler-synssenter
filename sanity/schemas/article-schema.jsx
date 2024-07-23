@@ -36,7 +36,7 @@ const articles = {
       title: "Intro",
       type: "text",
       description: "Kort intro om artikkelen",
-      rows: 4,
+      rows: 2,
       validation: (rule) => [rule.max(160).error("Må være mindre enn 160 tegn")],
     },
     {

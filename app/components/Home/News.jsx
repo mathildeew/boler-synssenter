@@ -1,4 +1,3 @@
-// "use client";
 // import { useState } from "react";
 import { useAPI } from "../../../sanity/sanity-utils";
 import apiQueries from "../../../sanity/apiQueries";
