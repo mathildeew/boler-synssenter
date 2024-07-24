@@ -15,6 +15,7 @@ const apiQueries = (slug) => ({
       "imageUrl": image.asset->url,
       "imageAlt": image.alt,
       text,
+      link
     }  
     `,
 
