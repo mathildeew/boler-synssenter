@@ -5,8 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* fjern CMS ved publisering!  */
-
   :root {
     --page-gutter: 24px;
     --grid-gutter: 10px;

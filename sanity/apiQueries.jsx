@@ -9,6 +9,15 @@ const apiQueries = (slug) => ({
     }
     `,
 
+  about: `
+   *[_type == "about"][0]{
+      intro,
+      "imageAlt": image.alt,
+      "imageUrl": image.asset->url,
+      content
+   }
+   `,
+
   hero: `
     *[_type == "hero"][0]{
       title,

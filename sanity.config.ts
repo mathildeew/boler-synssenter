@@ -3,6 +3,7 @@ import { deskTool } from "sanity/desk";
 import { structureTool } from "sanity/structure";
 import { myStructure } from "./deskStructure";
 import schemas from "./sanity/schemas";
+import "./sanity/styles/custom-styles.css";
 
 const config = defineConfig({
   projectId: "w7pqyox8",

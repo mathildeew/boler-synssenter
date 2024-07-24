@@ -31,7 +31,7 @@ const articles = {
         {
           name: "alt",
           title: "Alternativ tekst",
-          description: "Enkel beskrivelse av bildet.",
+          description: "Enkel beskrivelse av bildet",
           type: "string",
           validation: (rule) => rule.required(),
         },
@@ -43,7 +43,7 @@ const articles = {
       type: "text",
       description: "Kort intro om artikkelen. Denne brukes på landingssiden og øverst i artikkelen.",
       rows: 2,
-      validation: (rule) => [rule.required().max(160).error("Må være mindre enn 160 tegn.")],
+      validation: (rule) => [rule.required().max(160).error("Må være mindre enn 160 tegn")],
     },
     {
       name: "content",
@@ -59,7 +59,7 @@ const articles = {
               name: "alt",
               title: "Alternativ tekst",
               type: "text",
-              description: "Kort beskrivelse av bildet, helst kun et par ord.",
+              description: "Kort beskrivelse av bildet, helst kun et par ord",
               validation: (rule) => rule.required(),
               rows: 1,
             },
