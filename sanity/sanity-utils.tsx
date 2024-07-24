@@ -1,4 +1,5 @@
 import { createClient } from "next-sanity";
+import { useState } from "react";
 
 export const client = createClient({
   projectId: "w7pqyox8",
