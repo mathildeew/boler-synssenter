@@ -46,7 +46,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <div>
                     <p>{info.phone}</p>
-                    <a href={`mailto:${info.email}`}>{info.email}</a>
+                    <a href={`mailto:${info.mail}`}>{info.mail}</a>
                   </div>
                   <div>
                     <p>{info.address.street}</p>
