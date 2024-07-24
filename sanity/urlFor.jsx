@@ -9,5 +9,9 @@ import imageUrlBuilder from "@sanity/image-url";
  */
 export function urlFor(value) {
   const builder = imageUrlBuilder(client);
+  
+  if (!value) {
+    return null;
+  }
   return builder.image(value);
 }
