@@ -9,16 +9,25 @@ const apiQueries = (slug) => ({
     }
     `,
 
+  hero: `
+    *[_type == "hero"][0]{
+      title,
+      "imageUrl": image.asset->url,
+      "imageAlt": image.alt,
+      text,
+    }  
+    `,
+
   articles: `
     *[_type == "article"]| order(_createdAt desc){
-        _id,
-        name,
-        intro,
-        "slug": slug.current,
-        "image": image.asset -> url,
-        _createdAt
-      }
-      `,
+      _id,
+      name,
+      intro,
+      "slug": slug.current,
+      "image": image.asset -> url,
+      _createdAt
+    }
+    `,
 
   article: `
     *[_type == "article" && slug.current == "${slug}"][0]{
