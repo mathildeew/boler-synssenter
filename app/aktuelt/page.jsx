@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
-// import { useAPI } from "../../sanity/sanity-utils";
 import { useState, useEffect, useCallback } from "react";
-import apiQueries from "../../sanity/apiQueries";
 import useAPI from "../hooks/useAPI";
+import apiQueries from "../../sanity/apiQueries";
 
 export default function Aktuelt() {
   const [articles, setArticles] = useState([]);
