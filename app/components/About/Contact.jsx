@@ -26,7 +26,7 @@ export default function Contact() {
     <>
       {isSuccess && (
         <section className="bg-lightBlue w-full">
-          <div className="max-w-[1460px] flex flex-col gap-20 py-16 mx-auto lg:flex-row">
+          <div className="max-w-[1460px] flex flex-col gap-12 py-16 mx-auto lg:flex-row">
             <div className="text-darkPurple flex flex-col gap-12 p-8">
               <div className="flex flex-col gap-2">
                 <div className="flex gap-3 items-center">
@@ -57,7 +57,7 @@ export default function Contact() {
                 </p>
               </div>
               <Link href="/synsundersokelse" className="baseButton text-lightBlue mx-auto ">
-                Bestill synsundersøkelse
+                Bestill time
               </Link>
             </div>
 

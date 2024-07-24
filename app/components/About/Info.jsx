@@ -25,7 +25,7 @@ export default function Info() {
   console.log(about);
 
   return (
-    <section className="text-darkPurple flex flex-col gap-8 mx-4">
+    <section className="text-darkPurple flex flex-col gap-8 items-center px-4 pb-10 md:px-10">
       {isLoading && <Loader />}
       {isSuccess && (
         <div>
