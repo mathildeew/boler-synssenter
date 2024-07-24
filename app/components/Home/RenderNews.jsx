@@ -7,7 +7,7 @@ export default function RenderNews(data) {
   return (
     <div className="max-w-[1460px] grid gap-6 grid-cols-news overflow-auto scroll-snap-mandatory gridExpand:grid-cols-2 md:gap-6 lg:grid-cols-4">
       {articles.map((article) => {
-        const [hover, setHover] = useState();
+        const [hover, setHover] = useState(false);
 
         return (
           <Link
