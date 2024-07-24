@@ -3,10 +3,10 @@ import Link from "next/link";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import RenderNews from "../Home/RenderNews";
+import { useState, useEffect, useCallback } from "react";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
-
 export default function News() {
   const [articles, setArticles] = useState([]);
   const { fetchApi, isLoading, isSuccess, isError, errorMsg } = useAPI();
