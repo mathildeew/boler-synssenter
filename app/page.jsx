@@ -8,9 +8,6 @@ import Hero from "./components/Home/Hero";
 import Services from "./components/Home/Services";
 import News from "./components/Home/News";
 
-// Revalidate the page every 60 seconds
-export const revalidate = 60;
-
 export default function Home() {
   const [heroData, setHeroData] = useState([]);
   const { fetchApi, isLoading, isSuccess, isError, errorMsg } = useAPI();
@@ -23,6 +20,7 @@ export default function Home() {
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <>
       {isLoading && <Loader />}
