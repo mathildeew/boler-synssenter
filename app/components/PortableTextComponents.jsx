@@ -3,7 +3,14 @@ import { urlFor } from "../../sanity/urlFor";
 
 export const PortableTextComponents = {
   types: {
-    image: ({ value }) => <img src={urlFor(value).url()} className="w-full rounded-xl mb-12" />,
+    image: ({ value }) => {
+      return (
+        <div className="mb-6">
+          <img src={urlFor(value).url()} className="w-full rounded-xl " />
+          {value.desc && <figcaption className="text-sm text-center md:text-lg">{value.desc}</figcaption>}
+        </div>
+      );
+    },
   },
   list: {
     bullet: ({ children }) => <ul className="list-disc ml-3">{children}</ul>,
@@ -16,7 +23,7 @@ export const PortableTextComponents = {
     h2: ({ children }) => <h3 className="text-3xl font-sans font-medium  tracking-wide">{children}</h3>,
     h3: ({ children }) => <h4 className="text-2xl font-sans font-medium tracking-wide">{children}</h4>,
     blockquote: ({ children }) => <blockquote className="text-xl border-l-darkPurple border-l-4 px-2">{children}</blockquote>,
-    highlighted: ({ children }) => <span className="text-4xl bg-lightPurple bg-opacity-75 p-2 inline-block leading-10 rounded-xl my-5">{children}</span>,
+    highlighted: ({ children }) => <span className="text-3xl text-center bg-lightPurple bg-opacity-75 p-2 inline-block leading-10 rounded-xl my-5">{children}</span>,
   },
   marks: {
     link: ({ children, value }) => {

@@ -1,12 +1,14 @@
 "use client";
-import { PortableText } from "@portabletext/react";
-import { urlFor } from "../../../sanity/urlFor";
-import { PortableTextComponents } from "../../components/PortableTextComponents";
-import Link from "next/link";
-import apiQueries from "../../../sanity/apiQueries";
-import useAPI from "../../hooks/useAPI";
 import { useCallback, useState, useEffect } from "react";
+import Link from "next/link";
+import useAPI from "../../hooks/useAPI";
+import apiQueries from "../../../sanity/apiQueries";
 import Loader from "../../components/Loader/Loader";
+import Error from "../../components/Error";
+import RenderArticle from "../../components/RenderArticle";
+
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
 
 export default function Article({ params }) {
   const [article, setArticle] = useState([]);
@@ -23,8 +25,6 @@ export default function Article({ params }) {
     getData();
   }, []);
 
-  console.log(article);
-
   return (
     <>
       {isLoading && <Loader />}
@@ -34,18 +34,11 @@ export default function Article({ params }) {
           <Link href="/aktuelt" className="hover:underline">
             ← Aktuelt
           </Link>
-          <>
-            <section className="max-w-[1000px] flex flex-col gap-6" data-animate-in="true" data-animation-order="1">
-              <h1>{article.name}</h1>
-              <span className="text-xl text-center md:text-3xl">{article.intro}</span>
-              <img src={urlFor(article.image).url()} alt={article.image.alt} className="max-h-[550px] object-cover object-center rounded-xl" />
-            </section>
-            <section className="max-w-[700px]">
-              <PortableText value={article.content} components={PortableTextComponents} />
-            </section>
-          </>
+          <RenderArticle title={article.name} article={article} />
         </article>
       )}
+
+      {isError && <Error />}
     </>
   );
 }
