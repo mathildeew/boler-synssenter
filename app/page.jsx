@@ -1,11 +1,15 @@
 "use client";
+import { useCallback, useEffect, useState } from "react";
+import useAPI from "./hooks/useAPI";
+import apiQueries from "../sanity/apiQueries";
+import Loader from "./components/Loader/Loader";
+import Error from "./components/Error";
 import Hero from "./components/Home/Hero";
 import Services from "./components/Home/Services";
 import News from "./components/Home/News";
-import { useCallback, useEffect, useState } from "react";
-import apiQueries from "../sanity/apiQueries";
-import useAPI from "./hooks/useAPI";
-import Loader from "./components/Loader/Loader";
+
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
 
 export default function Home() {
   const [heroData, setHeroData] = useState([]);
@@ -30,6 +34,8 @@ export default function Home() {
           <News />
         </div>
       )}
+
+      {isError && <Error />}
     </>
   );
 }
