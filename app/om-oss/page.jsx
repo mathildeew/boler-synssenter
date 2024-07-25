@@ -1,10 +1,12 @@
 import Info from "../components/About/Info";
 import Contact from "../components/About/Contact";
-import { metadata } from "../layout";
+
+export const metadata = {
+  title: "Bøler Synssenter | Om oss",
+  description: "...",
+};
 
 export default function About() {
-metadata
-
   return (
     <>
       <article className="w-full">

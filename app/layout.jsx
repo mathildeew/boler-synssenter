@@ -10,14 +10,10 @@ import Footer from "./components/Footer";
 // Rendering
 import ClientLayout from "./rendering/ClientLayout";
 
-// Metadata
 export const metadata = {
   icons: {
     icon: "/icon.png",
   },
-
-  title: "Bøler Synssenter",
-  description: "---",
 };
 
 export default function RootLayout({ children }) {

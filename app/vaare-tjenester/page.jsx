@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Bøler Synssenter | Våre tjenester",
+  description: "...",
+};
+
 export default function Tjenester() {
   return (
     <div className="max-w-[1460px] grid gap-20 px-4 md:px-10">
