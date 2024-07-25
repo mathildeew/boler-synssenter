@@ -10,7 +10,7 @@ const apiQueries = (slug) => ({
     `,
 
   about: `
-   *[_type == "about"][0]{
+    *[_type == "about"][0]{
       intro,
       "imageAlt": image.alt,
       "imageUrl": image.asset->url,
