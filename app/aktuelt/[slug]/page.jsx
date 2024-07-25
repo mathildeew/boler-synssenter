@@ -7,9 +7,6 @@ import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error";
 import RenderArticle from "../../components/RenderArticle";
 
-// Revalidate the page every 60 seconds
-export const revalidate = 60;
-
 export default function Article({ params }) {
   const [article, setArticle] = useState([]);
   const slug = params.slug;

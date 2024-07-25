@@ -40,17 +40,41 @@ export default function Header() {
 
         <nav className={`text-darkPurple bg-lightBeige w-full h-screen absolute z-10 lg:hidden ${openMenu ? "visible" : "hidden"}`}>
           <div className="flex flex-col items-center gap-12 py-16">
-            <Link href="/synsundersokelse" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
-              Synsundersøkelse
+            <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+              Bestill time
+            </a>
+            <Link
+              href="/vaare-tjenester"
+              className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
+              data-animate-in="true"
+              data-animation-order="4"
+              onClick={() => {
+                toogleLocked(false), setOpenMenu(false);
+              }}
+            >
+              Våre tjenester
             </Link>
-            <Link href="/aktuelt" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
-              Aktuelt
-            </Link>
-            <Link href="/om-oss" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+            <Link
+              href="/om-oss"
+              className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
+              data-animate-in="true"
+              data-animation-order="3"
+              onClick={() => {
+                toogleLocked(false), setOpenMenu(false);
+              }}
+            >
               Om oss
             </Link>
-            <Link href="/kontakt-oss" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
-              Kontakt oss
+            <Link
+              href="/aktuelt"
+              className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
+              data-animate-in="true"
+              data-animation-order="2"
+              onClick={() => {
+                toogleLocked(false), setOpenMenu(false);
+              }}
+            >
+              Aktuelt
             </Link>
             <a href="https://www.coptikk.no/linsebutikk" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="5">
               Tom for linser? Bestill kontaktlinser
@@ -76,13 +100,12 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
+                <a href="/bestill-timehttps://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+                  Bestill time
+                </a>
                 <Link href="/vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
                   Våre tjenester
                 </Link>
-                <Link href="/bestill-time" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
-                  Bestill time
-                </Link>
-
                 <Link href="/om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
                   Om oss
                 </Link>
