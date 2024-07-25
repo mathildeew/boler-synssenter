@@ -63,6 +63,13 @@ const articles = {
               validation: (rule) => rule.required(),
               rows: 1,
             },
+            {
+              name: "desc",
+              title: "Beskrivelse av bilde",
+              type: "text",
+              rows: 2,
+              description: "Enkel beskrivelse av bildet. Dette vises under bildet på nettsiden.",
+            },
           ],
         },
       ],
