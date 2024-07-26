@@ -21,7 +21,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-lightBlue w-full">
+    <footer className="bg-lightBeige w-full">
       <div className="footerContainer bg-darkPurple flex justify-center px-4 py-16 md:px-10 md:py-28 lg:px-16">
         {/* <BolerLogo /> */}
         <div className="w-full max-w-[1460px] text-lightBlue grid gap-12 md:grid-cols-2">
