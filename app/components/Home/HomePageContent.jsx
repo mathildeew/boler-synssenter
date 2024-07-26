@@ -7,7 +7,6 @@ import News from "./News";
 import Services from "./Services";
 import Loader from "../Loader/Loader";
 import Error from "../Error";
-import { usePathname } from "next/navigation";
 
 export default function HomePageContent() {
   const [heroData, setHeroData] = useState([]);

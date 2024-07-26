@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <ScrollToTop />
         <Header />
-        <main className="flex flex-col items-center">{children}</main>
+        <main className="flex flex-col items-center pb-20">{children}</main>
         <Footer />
       </body>
     </html>
