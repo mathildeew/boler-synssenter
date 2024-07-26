@@ -1,5 +1,5 @@
 import apiQueries from "../../../sanity/apiQueries";
-import { client, useAPI } from "../../../sanity/sanity-utils";
+import { client } from "../../../sanity/sanity-utils";
 import ArticleComponent from "../../components/Articles/[slug]/ArticleComponent";
 
 export async function generateMetadata({ params }) {
