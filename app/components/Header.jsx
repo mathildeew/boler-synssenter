@@ -100,7 +100,7 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
-                <a href="/bestill-timehttps://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
                   Bestill time
                 </a>
                 <Link href="/vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
