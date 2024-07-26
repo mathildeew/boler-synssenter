@@ -1,20 +1,14 @@
-import Hero from "./components/Home/Hero";
-import Services from "./components/Home/Services";
-import News from "./components/Home/News";
+import HomePageContent from "./components/Home/HomePageContent";
 
 export const metadata = {
-  title: "Bøler Synssenter",
-  description: "...",
+  title: "Bøler Synssenter | Din optiker på Østensjø",
+  description: "Bøler Synssenter er din lokale optiker på Østensjø. Book synsundersøkelse hos oss i dag.",
 };
 
 export default function Home() {
   return (
     <>
-      <div data-animate-in="true" data-animation-order="1">
-        <Hero />
-        <Services />
-        <News />
-      </div>
+      <HomePageContent />;
     </>
   );
 }

@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="no">
       <body>
-        <ClientLayout>
-          <Header />
-          <main className="flex flex-col items-center">{children}</main>
-          <Footer />
-        </ClientLayout>
+        {/* <ClientLayout> */}
+        <Header />
+        <main className="flex flex-col items-center">{children}</main>
+        <Footer />
+        {/* </ClientLayout> */}
       </body>
     </html>
   );

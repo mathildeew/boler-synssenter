@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Bøler Synssenter | Våre tjenester",
-  description: "...",
+  description: "På tide å sjekke synet? Bestill en synstest på nett og kom innom oss. Synsundersøkelse utføres av vår erfarne optiker.",
 };
 
 export default function Tjenester() {
   return (
-    <div className="max-w-[1460px] grid gap-20 px-4 md:px-10">
+    <div className="max-w-[1460px] grid gap-20 px-4 md:px-10" data-animate-in="true" data-animation-order="1">
       <h1 className="text-darkPurple">Våre tjenester</h1>
 
       <div className="text-darkPurple grid grid-cols-1 grid-rows-1 gap-8 md:grid-cols-2 md:gap-12 items-center">
