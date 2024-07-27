@@ -1,5 +1,4 @@
-import Info from "../components/About/Info";
-import Contact from "../components/About/Contact";
+import AboutPageContent from "../components/About/AboutPageContent";
 
 export const metadata = {
   title: "Bøler Synssenter | Om oss",
@@ -7,12 +6,5 @@ export const metadata = {
 };
 
 export default function About() {
-  return (
-    <>
-      <article className="w-full">
-        <Info />
-        <Contact />
-      </article>
-    </>
-  );
+  return <AboutPageContent />;
 }
