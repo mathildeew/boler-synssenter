@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
-import Loader from "../Loader/Loader";
+import Loader from "../UI/Loader";
 
 export default function NewsComponent() {
   const [articleId, setArticleId] = useState(null);

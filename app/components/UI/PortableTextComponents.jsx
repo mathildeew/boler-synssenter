@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { urlFor } from "../../sanity/urlFor";
+import { urlFor } from "../../../sanity/urlFor";
 
 export const PortableTextComponents = {
   types: {

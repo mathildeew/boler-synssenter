@@ -1,6 +1,6 @@
 "use client";
 // import BolerLogo from "./bolerLogo";
-import { useStoreInfo } from "../context/StoreInfoProvider";
+import { useStoreInfo } from "../../context/StoreInfoProvider";
 
 export default function Footer() {
   const { address, mail, openingHours, phone } = useStoreInfo();

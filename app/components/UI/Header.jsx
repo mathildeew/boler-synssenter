@@ -5,7 +5,7 @@ import { useLockBodyScroll, useToggle } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import BolerLogo from "./BolerLogo";
+import BolerLogo from "../BolerLogo";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);

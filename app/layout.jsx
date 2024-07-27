@@ -1,3 +1,4 @@
+// Styles
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -6,10 +7,10 @@ config.autoAddCss = false;
 // Layout utils
 import ScrollToTop from "./utils/ScrollToTop";
 
-// Components
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+// Context & components
 import { StoreInfoProvider } from "./context/StoreInfoProvider";
+import Header from "./components/UI/Header";
+import Footer from "./components/UI/Footer";
 
 // Static metadata
 export const metadata = {

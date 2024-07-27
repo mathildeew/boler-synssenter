@@ -27,7 +27,6 @@
   }
 
   /* GLOBALS - - - - - - - - - - */
-
   h1 {
     @apply text-5xl text-center font-serif;
   }
@@ -153,8 +152,7 @@
     p,
     a,
     li {
-      font-size: 20px;
-      line-height: 32px;
+      @apply text-xl leading-8;
     }
   }
 }

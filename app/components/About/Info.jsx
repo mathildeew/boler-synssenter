@@ -1,4 +1,4 @@
-import RenderArticle from "../RenderArticle";
+import RenderArticle from "../UI/RenderArticle";
 
 export default function Info(data) {
   const { data: article } = data;

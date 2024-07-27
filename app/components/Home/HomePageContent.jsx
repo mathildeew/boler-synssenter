@@ -5,8 +5,8 @@ import apiQueries from "../../../sanity/apiQueries";
 import Hero from "./Hero";
 import News from "./News";
 import Services from "./Services";
-import Loader from "../Loader/Loader";
-import Error from "../Error";
+import Loader from "../UI/Loader";
+import Error from "../UI/Error";
 
 export default function HomePageContent() {
   const [heroData, setHeroData] = useState([]);
@@ -27,7 +27,7 @@ export default function HomePageContent() {
 
       {isSuccess && (
         <div data-animate-in="true" data-animation-order="1">
-          <Hero data={heroData} />
+          <Hero heroData={heroData} />
           <Services />
           <News />
         </div>

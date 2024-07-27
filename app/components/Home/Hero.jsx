@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-export default function Hero({ data }) {
-  const { title, text, imageUrl, imageAlt, link } = data;
+export default function Hero({ heroData }) {
+  const { title, text, imageUrl, imageAlt, link } = heroData;
 
   return (
     <section className="w-full lg:h-[500px]">

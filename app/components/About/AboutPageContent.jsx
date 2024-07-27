@@ -2,8 +2,8 @@
 import { useState, useEffect, useCallback } from "react";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
-import Loader from "../Loader/Loader";
-import Error from "../Error";
+import Loader from "../UI/Loader";
+import Error from "../UI/Error";
 import Info from "./Info";
 import Contact from "./Contact";
 

@@ -3,9 +3,9 @@ import { useCallback, useState, useEffect } from "react";
 import Link from "next/link";
 import useAPI from "../../../hooks/useAPI";
 import apiQueries from "../../../../sanity/apiQueries";
-import Loader from "../../Loader/Loader";
-import RenderArticle from "../../RenderArticle";
-import Error from "../../Error";
+import Loader from "../../UI/Loader";
+import RenderArticle from "../../UI/RenderArticle";
+import Error from "../../UI/Error";
 
 export default function ArticleComponent({ params }) {
   const [article, setArticle] = useState([]);
