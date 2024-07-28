@@ -1,11 +1,6 @@
 [build]
-  command = "go build -o myapp"
-  publish = "public"
-
-[build.environment]
-  CACHE_KEY = "go-deps-cache-2024-07"  # Example: Change the date or version to force cache invalidation
+  command = "npm run build"
+  publish = ".next"
 
 [[plugins]]
-  package = "@netlify/plugin-cache"
-  [plugins.inputs]
-  cache_key = "go-deps-cache-2024-07"
+  package = "@netlify/plugin-nextjs"
