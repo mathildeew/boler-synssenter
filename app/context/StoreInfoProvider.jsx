@@ -24,17 +24,17 @@ export function StoreInfoProvider({ children }) {
 
   const { fetchApi } = useAPI();
 
-  const getData = useCallback(async () => {
-    const info = await fetchApi(apiQueries().info);
-    setAddress(info.address);
-    setMail(info.mail);
-    setOpeningHours(info.openingHours);
-    setPhone(info.phone);
-  });
-
   useEffect(() => {
+    const getData = async () => {
+      const info = await fetchApi(apiQueries().info);
+      setAddress(info.address);
+      setMail(info.mail);
+      setOpeningHours(info.openingHours);
+      setPhone("info.phone");
+    };
+
     getData();
-  }, []);
+  }, [fetchApi]);
 
   const value = useMemo(
     () => ({

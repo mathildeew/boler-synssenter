@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { createClient } from "next-sanity";
 
 /**
@@ -7,9 +7,9 @@ import { createClient } from "next-sanity";
  * @returns {{
  * fetchApi: function,
  * data: any,
- * isLoading: boolean | null,
- * isSuccess: boolean | null,
- * isError: : boolean | null,
+ * isLoading: boolean,
+ * isSuccess: boolean,
+ * isError: boolean,
  * errorMsg: string | null
  * }}
  */
@@ -33,7 +33,7 @@ export default function useAPI() {
    * @param {string} query - The GROQ query to be executed
    * @returns {Promise<any>} - The API response or null if an error occurs
    */
-  async function fetchApi(query) {
+  const fetchApi = useCallback(async (query) => {
     setIsLoading(true);
     setIsSuccess(false);
     setIsError(false);
@@ -41,7 +41,6 @@ export default function useAPI() {
 
     try {
       const json = await client.fetch(query);
-
       setData(json);
       setIsSuccess(true);
       return json;
@@ -52,7 +51,7 @@ export default function useAPI() {
     } finally {
       setIsLoading(false);
     }
-  }
+  }, []);
 
   return {
     fetchApi,

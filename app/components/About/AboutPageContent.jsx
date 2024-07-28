@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import Loader from "../UI/Loader";
@@ -12,16 +12,17 @@ export const revalidate = 60;
 
 export default function AboutPageContent() {
   const [about, setAbout] = useState([]);
-  const { fetchApi, isLoading, isSuccess, isError, errorMsg } = useAPI();
-
-  const getData = useCallback(async () => {
-    const result = await fetchApi(apiQueries().about);
-    setAbout(result);
-  });
+  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
 
   useEffect(() => {
+    const getData = async () => {
+      const result = await fetchApi(apiQueries().about);
+      setAbout(result);
+    };
+
     getData();
-  }, []);
+  }, [fetchApi]);
+
   return (
     <>
       {isLoading && <Loader />}

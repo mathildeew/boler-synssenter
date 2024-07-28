@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import Hero from "./Hero";
@@ -10,16 +10,16 @@ import Error from "../UI/Error";
 
 export default function HomePageContent() {
   const [heroData, setHeroData] = useState([]);
-  const { fetchApi, isLoading, isSuccess, isError, errorMsg } = useAPI();
-
-  const getData = useCallback(async () => {
-    const result = await fetchApi(apiQueries().hero);
-    setHeroData(result);
-  }, []);
+  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
 
   useEffect(() => {
+    const getData = async () => {
+      const result = await fetchApi(apiQueries().hero);
+      setHeroData(result);
+    };
+
     getData();
-  }, [getData]);
+  }, [fetchApi]);
 
   return (
     <>

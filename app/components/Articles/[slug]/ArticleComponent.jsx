@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import useAPI from "../../../hooks/useAPI";
 import apiQueries from "../../../../sanity/apiQueries";
@@ -11,16 +11,16 @@ export default function ArticleComponent({ params }) {
   const [article, setArticle] = useState([]);
   const slug = params.slug;
 
-  const { fetchApi, isLoading, isSuccess, isError, errorMsg } = useAPI();
-
-  const getData = useCallback(async () => {
-    const result = await fetchApi(apiQueries(slug).article);
-    setArticle(result);
-  });
+  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
 
   useEffect(() => {
+    const getData = async () => {
+      const result = await fetchApi(apiQueries(slug).article);
+      setArticle(result);
+    };
+
     getData();
-  }, []);
+  }, [fetchApi]);
 
   return (
     <>
