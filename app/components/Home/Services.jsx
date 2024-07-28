@@ -11,7 +11,7 @@ export default function Services() {
         </Link>
       </div>
 
-      <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-12">
+      <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-10">
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
             <img src="/icons/synsundersokelse.svg" className="w-20" />
@@ -38,6 +38,13 @@ export default function Services() {
             <img src="/icons/synstrening.svg" className="w-20" />
           </div>
           <p className="font-medium">Synstrening</p>
+        </div>
+
+        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
+          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
+            <img src="/icons/frames.svg" className="w-24" />
+          </div>
+          <p className="font-medium">Innfatninger</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
