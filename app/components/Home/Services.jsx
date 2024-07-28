@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Services() {
@@ -14,42 +15,54 @@ export default function Services() {
       <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-10">
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/synsundersokelse.svg" className="w-20" />
+            <div className="w-20">
+              <Image src="/icons/synsundersokelse.svg" width={144} height={144} layout="responsive" alt="Synsundersøkelse ikon" />
+            </div>
           </div>
           <p className="font-medium">Synsundersøkelse</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/oyehelse.svg" className="w-24" />
+            <div className="w-24">
+              <Image src="/icons/oyehelse.svg" width={144} height={144} layout="responsive" alt="Øyehelse ikon" />
+            </div>
           </div>
           <p className="font-medium">Øyehelse</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/kontaktlinser.svg" className="w-20" />
+            <div className="w-20">
+              <Image src="/icons/kontaktlinser.svg" width={144} height={144} layout="responsive" alt="Kontaktlinser ikon" />
+            </div>
           </div>
           <p className="font-medium">Kontaktlinser</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/synstrening.svg" className="w-20" />
+            <div className="w-20">
+              <Image src="/icons/synstrening.svg" width={144} height={144} layout="responsive" alt="Synstrening ikon" />
+            </div>
           </div>
           <p className="font-medium">Synstrening</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/frames.svg" className="w-24" />
+            <div className="w-24">
+              <Image src="/icons/frames.svg" width={144} height={144} layout="responsive" alt="Briller ikon" />
+            </div>
           </div>
           <p className="font-medium">Innfatninger</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <img src="/icons/forerkortattest.svg" className="w-24" />
+            <div className="w-24">
+              <Image src="/icons/forerkortattest.svg" width={144} height={144} layout="responsive" alt="Førerkortattest ikon" />
+            </div>
           </div>
           <p className="font-medium">Førerkortattest</p>
         </div>
