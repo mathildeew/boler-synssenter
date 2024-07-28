@@ -2,6 +2,8 @@ import { PortableText } from "@portabletext/react";
 import { PortableTextComponents } from "./PortableTextComponents";
 
 export default function RenderArticle({ title, article }) {
+  console.log(article);
+
   return (
     <section>
       <section className="w-full  max-w-[1000px] flex flex-col gap-10 mb-6">

@@ -27,7 +27,7 @@ export default function AboutPageContent() {
       {isLoading && <Loader />}
 
       {isSuccess && (
-        <section data-animate-in="true" data-animation-order="1">
+        <section data-animate-in="true" data-animation-order="1" className="w-full">
           <Info data={about} />
           <Contact />
         </section>

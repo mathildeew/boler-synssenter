@@ -20,9 +20,9 @@ export default function RenderNews(data) {
               setHover(false);
             }}
           >
-            <div className="text-darkPurple flex flex-col gap-3 snap-center">
-              <div className="overflow-hidden rounded-3xl">
-                <img className={`w-96 h-72 object-cover transition-all ease-in-out duration-300 ${hover ? "scale-[110%]" : "scale-1"}`} src={article.image} alt={article.name} />
+            <div className="text-darkPurple flex flex-col gap-3 items-center snap-center">
+              <div className="w-fit overflow-hidden">
+                <img className={`w-96 h-72 rounded-3xl object-cover transition-all ease-in-out duration-300 ${hover ? "scale-[110%]" : "scale-1"}`} src={article.image} alt={article.name} />
               </div>
               <h3>{article.name}</h3>
               <p>{article.intro}</p>
