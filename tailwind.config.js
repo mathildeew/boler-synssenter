@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         lightBeige: "#fffcf4",
-        darkBeige: "#faf3e9",
+        darkBeige: "",
         lightBlue: "#C4E5FA",
         lightPurple: "#C9CDFA",
         darkPurple: "#050A53",
@@ -21,15 +21,6 @@ module.exports = {
       },
       screens: {
         gridExpand: "600px",
-      },
-      animation: {
-        inFromBottom: "inFromBottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
-      },
-      keyframes: {
-        inFromBottom: {
-          from: { transform: "translateY(15px)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
       },
     },
   },
