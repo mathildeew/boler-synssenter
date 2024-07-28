@@ -44,7 +44,8 @@ const apiQueries = (slug) => ({
       _id,
       _updatedAt,
       "slug": slug.current,
-      image,
+      "imageAlt": image.alt,
+      "imageUrl": image.asset->url,
       name,
       intro,
       content
