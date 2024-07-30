@@ -23,7 +23,7 @@ export default function RenderNews(data) {
             <div className="text-darkPurple flex flex-col gap-3 snap-center items-center">
               <div className="w-full h-72 rounded-3xl overflow-hidden">
                 <div className={`w-full h-72 transition-all ease-in-out duration-300 overflow-hidden ${articleId === article._id ? "scale-[110%]" : "scale-1"}`}>
-                  <Image src={article.image} alt={article.name} width={100} height={100} layout="responsive" objectFit="cover" />
+                  <Image src={article.image} alt={article.name} width={1000} height={1000} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
               </div>
               <div className="text-left w-full">

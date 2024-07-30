@@ -30,7 +30,7 @@ export function StoreInfoProvider({ children }) {
       setAddress(info.address);
       setMail(info.mail);
       setOpeningHours(info.openingHours);
-      setPhone("info.phone");
+      setPhone(info.phone);
     };
 
     getData();

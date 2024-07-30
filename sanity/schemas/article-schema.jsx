@@ -51,7 +51,35 @@ const articles = {
       type: "array",
       validation: (rule) => rule.required(),
       of: [
-        { type: "block" },
+        {
+          type: "block",
+          styles: [
+            {
+              title: "Normal",
+              value: "normal",
+            },
+            {
+              title: "Heading 1",
+              value: "h1",
+            },
+            {
+              title: "Heading 2",
+              value: "h2",
+            },
+            {
+              title: "Heading 3",
+              value: "h3",
+            },
+            {
+              title: "Highlighted",
+              value: "highlighted",
+            },
+            {
+              title: "Quote",
+              value: "blockquote",
+            },
+          ],
+        },
         {
           type: "image",
           fields: [
@@ -59,7 +87,7 @@ const articles = {
               name: "alt",
               title: "Alternativ tekst",
               type: "text",
-              description: "Kort beskrivelse av bildet, helst kun et par ord",
+              description: "Kort beskrivelse av bildet, helst kun et par ord. Brukes om bildet ikke kan vises eller for svaksynte.",
               validation: (rule) => rule.required(),
               rows: 1,
             },
