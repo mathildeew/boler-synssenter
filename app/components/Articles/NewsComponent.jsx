@@ -5,6 +5,7 @@ import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import Loader from "../UI/Loader";
 import Error from "../UI/Error";
+import Image from "next/image";
 
 export default function NewsComponent() {
   const [articleId, setArticleId] = useState(null);
@@ -41,8 +42,10 @@ export default function NewsComponent() {
                   }}
                 >
                   <div className="text-darkPurple flex flex-col gap-3 snap-center">
-                    <div className="overflow-hidden w-full rounded-3xl">
-                      <img className={`w-full h-72 object-cover transition-all ease-in-out duration-300 ${articleId === article._id ? "scale-[110%]" : "scale-1"}`} src={article.image} alt={article.name} />
+                    <div className="w-full h-72 rounded-3xl overflow-hidden">
+                      <div className={`w-full h-72 transition-all ease-in-out duration-300 overflow-hidden ${articleId === article._id ? "scale-[110%]" : "scale-1"}`}>
+                        <Image src={article.image} alt={article.name} width={100} height={100} layout="responsive" objectFit="cover" />
+                      </div>
                     </div>
                     <h3>{article.name}</h3>
                     <p>{article.intro}</p>

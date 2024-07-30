@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "../../../sanity/urlFor";
 
@@ -6,7 +7,9 @@ export const PortableTextComponents = {
     image: ({ value }) => {
       return (
         <div className="mb-6">
-          <img src={urlFor(value).url()} className="w-full rounded-xl " />
+          <div className="w-full rounded-xl overflow-hidden">
+            <Image src={urlFor(value).url()} alt={value.alt} width={0} height={0} style={{ height: "fit", objectFit: "cover" }} layout="responsive" />
+          </div>
           {value.desc && <figcaption className="text-sm text-center md:text-lg">{value.desc}</figcaption>}
         </div>
       );
