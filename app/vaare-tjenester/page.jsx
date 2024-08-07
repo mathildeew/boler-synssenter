@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Tjenester() {
   return (
-    <div className="max-w-[1460px] flex flex-col gap-20 items-center px-4 py-16 md:px-10 md:py-20" data-animate-in="true" data-animation-order="1">
+    <div className="max-w-[1460px] flex flex-col gap-20 items-center px-4 py-16 md:px-10 md:py-20" data-animate-in="true">
       <div className="max-w-[1000px] text-darkPurple flex flex-col gap-8 items-center md:gap-12">
         <h1 className="text-darkPurple">Våre tjenester</h1>
         <span className="text-xl text-center md:text-3xl">Godt syn og god øyehelse er svært viktig, da øynene våre bidrar med hele 80 prosent av sanseinntrykkene. Vi tilbyr vi omfattende synsundersøkselser som inkluderer målinger og tester som sikrer øynene dine har de beste forutsetninger for et optimalt syn.</span>
