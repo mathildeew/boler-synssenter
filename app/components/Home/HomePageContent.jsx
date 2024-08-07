@@ -26,7 +26,7 @@ export default function HomePageContent() {
       {isLoading && <Loader />}
 
       {isSuccess && (
-        <div data-animate-in="true" data-animation-order="1" className="flex flex-col gap-20">
+        <div data-animate-in="true" className="flex flex-col gap-20">
           <Hero heroData={heroData} />
           <Services />
           <News />

@@ -57,7 +57,7 @@
   }
 
   .baseButton {
-    @apply text-lightBlue font-semibold text-center tracking-wider uppercase w-fit bg-darkPurple py-2.5 px-16 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
+    @apply font-semibold text-center tracking-wider uppercase w-fit bg-darkPurple py-2.5 px-16 rounded-full border-2 border-darkPurple transition-all ease-in-out duration-200 hover:text-darkPurple hover:bg-transparent;
   }
 
   img {

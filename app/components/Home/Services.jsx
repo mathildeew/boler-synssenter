@@ -52,10 +52,10 @@ export default function Services() {
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
             <div className="w-24">
-              <Image src="/icons/frames.svg" width={144} height={144} layout="responsive" alt="Briller ikon" />
+              <Image src="/icons/frames.svg" width={144} height={144} layout="responsive" alt="Brilleikon" />
             </div>
           </div>
-          <p className="font-medium">Innfatninger</p>
+          <p className="font-medium">Innfatningsveiledning</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
