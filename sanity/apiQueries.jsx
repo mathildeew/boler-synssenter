@@ -34,7 +34,8 @@ const apiQueries = (slug) => ({
     `,
 
   services: `
-    *[_type == "services"]{
+    *[_type == "services"]| order(_createdAt desc){
+      _id,
       title,
       "imageUrl": image.asset->url,
       "imageAlt": image.alt,

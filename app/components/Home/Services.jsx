@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import apiQueries from "../../../sanity/apiQueries";
 import useAPI from "../../hooks/useAPI";
 
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
 export default function Services() {
   const [servicesData, setServicesData] = useState([]);
   const { fetchApi, isLoading, isSuccess, isError } = useAPI();
@@ -17,6 +20,8 @@ export default function Services() {
     getData();
   }, [fetchApi]);
 
+  console.log(servicesData);
+
   return (
     <section className="bg-lightPurple w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
       <div className="text-darkPurple text-center max-w-3xl flex flex-col gap-10 items-center">
@@ -28,16 +33,26 @@ export default function Services() {
       </div>
 
       <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-10">
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
+        {servicesData?.map((service) => {
+          <div key={service._id} className="w-full flex flex-col items-center gap-4 sm:w-48">
+            <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
+              <div className="w-20">
+                <Image src={service.imageUrl} width={144} height={144} layout="responsive" alt={service.imageAlt} />
+              </div>
+            </div>
+            <p className="font-medium">{service.title}</p>
+          </div>;
+        })}
+        {/* <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
             <div className="w-20">
               <Image src="/icons/synsundersokelse.svg" width={144} height={144} layout="responsive" alt="Synsundersøkelse ikon" />
             </div>
           </div>
           <p className="font-medium">Synsundersøkelse</p>
-        </div>
+        </div> */}
 
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
+        {/* <div className="w-full flex flex-col items-center gap-4 sm:w-48">
           <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
             <div className="w-24">
               <Image src="/icons/oyehelse.svg" width={144} height={144} layout="responsive" alt="Øyehelse ikon" />
@@ -80,7 +95,7 @@ export default function Services() {
             </div>
           </div>
           <p className="font-medium">Førerkortattest</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

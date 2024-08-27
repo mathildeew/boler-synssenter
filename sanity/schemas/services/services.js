@@ -7,7 +7,7 @@ const services = {
   icon: BillIcon,
   fields: [
     {
-      name: "name",
+      name: "title",
       title: "Tittel",
       type: "string",
       description: "Tittelen på tjenesten.",
@@ -33,7 +33,7 @@ const services = {
       title: "Tekst",
       type: "text",
       description: "Beskrivelse av tjenesten.",
-      rows: 4,
+      rows: 6,
       validation: (rule) => [rule.required().max(500).error("Må være mindre enn 500 tegn.")],
     },
   ],
