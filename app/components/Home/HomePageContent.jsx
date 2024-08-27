@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
+import Loader from "../UI/Loader";
+import Error from "../UI/Error";
 import Hero from "./Hero";
 import News from "./News";
 import Services from "./Services";
-import Loader from "../UI/Loader";
-import Error from "../UI/Error";
 
 export default function HomePageContent() {
   const [heroData, setHeroData] = useState([]);

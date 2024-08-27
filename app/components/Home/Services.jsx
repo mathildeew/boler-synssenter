@@ -55,7 +55,7 @@ export default function Services() {
               <Image src="/icons/frames.svg" width={144} height={144} layout="responsive" alt="Brilleikon" />
             </div>
           </div>
-          <p className="font-medium">Innfatningsveiledning</p>
+          <p className="font-medium text-center">Innfatninger &#38; solbriller</p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-4 sm:w-48">
