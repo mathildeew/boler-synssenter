@@ -1,6 +1,6 @@
-import apiQueries from "../../../sanity/apiQueries";
 import { client } from "../../../sanity/sanity-utils";
-import ArticleComponent from "../../components/Articles/[slug]/ArticleComponent";
+import apiQueries from "../../../sanity/apiQueries";
+import ArticleComponent from "../../components/News/[slug]/ArticleComponent";
 
 export async function generateMetadata({ params }) {
   const slug = params.slug;

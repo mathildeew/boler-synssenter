@@ -1,11 +1,11 @@
 "use client";
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import Loader from "../UI/Loader";
 import Error from "../UI/Error";
-import Image from "next/image";
 
 export default function NewsComponent() {
   const [articleId, setArticleId] = useState(null);
@@ -26,7 +26,7 @@ export default function NewsComponent() {
       {isLoading && <Loader />}
 
       {isSuccess && (
-        <section className="text-darkPurple grid gap-8 px-4 py-16 md:px-10 md:py-28 lg:gap-12" data-animate-in="true">
+        <section className="text-darkPurple grid gap-8 px-4 py-16 md:px-10 md:py-20 lg:gap-12" data-animate-in="true">
           <h1>Aktuelt</h1>
           <div className="max-w-[1460px] grid gap-8 overflow-auto grid-cols sm:grid-cols-2 lg:grid-cols-4">
             {articles.map((article) => {
