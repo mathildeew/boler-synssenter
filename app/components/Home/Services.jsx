@@ -1,7 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import apiQueries from "../../../sanity/apiQueries";
+import useAPI from "../../hooks/useAPI";
 
 export default function Services() {
+  const [servicesData, setServicesData] = useState([]);
+  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
+
+  useEffect(() => {
+    const getData = async () => {
+      const result = await fetchApi(apiQueries().services);
+      setServicesData(result);
+    };
+
+    getData();
+  }, [fetchApi]);
+
   return (
     <section className="bg-lightPurple w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
       <div className="text-darkPurple text-center max-w-3xl flex flex-col gap-10 items-center">

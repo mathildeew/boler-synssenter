@@ -9,14 +9,12 @@ const apiQueries = (slug) => ({
     }
     `,
 
-  about: `
-    *[_type == "about"][0]{
-      intro,
-      "imageAlt": image.alt,
-      "imageUrl": image.asset->url,
-      content
-   }
-   `,
+  homeMetadata: `
+    *[_type == "homeMetadata"][0]{
+      title,
+      description
+    }  
+    `,
 
   hero: `
     *[_type == "hero"][0]{
@@ -27,6 +25,45 @@ const apiQueries = (slug) => ({
       link
     }  
     `,
+
+  servicesMetadata: `
+    *[_type == "servicesMetadata"][0]{
+      title,
+      description
+    }  
+    `,
+
+  services: `
+    *[_type == "services"]{
+      title,
+      "imageUrl": image.asset->url,
+      "imageAlt": image.alt,
+      text,
+    } 
+    `,
+
+  aboutMetadata: `
+    *[_type == "aboutMetadata"][0]{
+      title,
+      description
+    }  
+    `,
+
+  about: `
+    *[_type == "about"][0]{
+      intro,
+      "imageAlt": image.alt,
+      "imageUrl": image.asset->url,
+      content
+   }
+   `,
+
+  newsMetadata: `
+   *[_type == "newsMetadata"][0]{
+     title,
+     description
+   }  
+   `,
 
   articles: `
     *[_type == "article"]| order(_createdAt desc){

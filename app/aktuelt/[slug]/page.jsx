@@ -2,6 +2,8 @@ import { client } from "../../../sanity/sanity-utils";
 import apiQueries from "../../../sanity/apiQueries";
 import ArticleComponent from "../../components/News/[slug]/ArticleComponent";
 
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
 export async function generateMetadata({ params }) {
   const slug = params.slug;
   const article = await client.fetch(apiQueries(slug).article);

@@ -1,5 +1,4 @@
 import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
 import { structureTool } from "sanity/structure";
 import { myStructure } from "./deskStructure";
 import schemas from "./sanity/schemas";
@@ -12,7 +11,6 @@ const config = defineConfig({
   apiVersion: "2024-06-08",
   basePath: "/admin",
   plugins: [
-    // deskTool(),
     structureTool({
       structure: myStructure,
     }),

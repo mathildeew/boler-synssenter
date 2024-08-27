@@ -4,7 +4,7 @@ const aboutMetadata = {
   type: "document",
   fields: [
     {
-      name: "name",
+      name: "title",
       title: "Tittel",
       type: "string",
       description: "Kort og konsis. Bruk relevante nøkkelord og sørg for at tittelen fanger oppmerksomheten til leserne.",

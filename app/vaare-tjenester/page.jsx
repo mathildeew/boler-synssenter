@@ -1,11 +1,22 @@
 import Image from "next/image";
+import apiQueries from "../../sanity/apiQueries";
+import { client } from "../../sanity/sanity-utils";
 
-export const metadata = {
-  title: "Bøler Synssenter | Våre tjenester",
-  description: "På tide å sjekke synet? Ler mer om tjenestene vi tilbyr her. Bestill en synstest på nett og kom innom oss. Synsundersøkelse utføres av vår erfarne optiker.",
-};
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
+
+export async function generateMetadata() {
+  const metadata = await client.fetch(apiQueries().servicesMetadata);
+
+  return {
+    title: `${metadata.title}`,
+    description: `${metadata.description}`,
+  };
+}
 
 export default function Tjenester() {
+
+  
   return (
     <div className="max-w-[1460px] flex flex-col gap-20 items-center px-4 py-16 md:px-10 md:py-20" data-animate-in="true">
       <div className="max-w-[1000px] text-darkPurple flex flex-col gap-8 items-center md:gap-12">
@@ -17,6 +28,7 @@ export default function Tjenester() {
       </div>
 
       <section className="text-darkPurple w-full grid justify-center items-center gap-10 sm:grid-cols-2 ">
+        
         <div className=" bg-lightBlue h-full flex flex-wrap justify-center gap-4 px-8 py-14 rounded-3xl sm:col-span-2 lg:col-span-1">
           <div className="flex flex-col items-center gap-2">
             <div className="w-36">
