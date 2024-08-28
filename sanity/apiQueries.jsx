@@ -44,6 +44,23 @@ const apiQueries = (slug) => ({
     } 
     `,
 
+  brandsMetadata: `
+    *[_type == "brandsMetadata"][0]{
+      title,
+      description
+    }  
+    `,
+
+  brands: `
+    *[_type == "brands"]{
+      _id,
+      name,
+      carousel,
+      info,
+      url
+    } 
+    `,
+
   aboutMetadata: `
     *[_type == "aboutMetadata"][0]{
       title,

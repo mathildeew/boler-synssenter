@@ -85,7 +85,7 @@ export default function Header() {
 
       <header className="bg-lightBeige w-full hidden lg:inline-block">
         <div className="w-full max-w-[1460px] flex flex-col items-center justify-between mx-auto px-10 py-4">
-          <div className="text-darkPurple w-full flex justify-end items-center gap-4" data-animate-in="true" data-animation-order="5">
+          <div className="text-darkPurple w-full flex justify-end items-center gap-4" data-animate-in="true" data-animation-order="6">
             <FontAwesomeIcon icon={faArrowRightLong} />
             <a href="https://www.coptikk.no/linsebutikk" className=" text-xl font-sans tracking-wider hover:underline hover:underline-offset-2">
               Tom for linser? Bestill kontaktlinser
@@ -100,16 +100,19 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
-                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
+                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
                   Bestill time
                 </a>
-                <Link href="/vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+                <Link href="/vaare-tjenester" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
                   Våre tjenester
                 </Link>
-                <Link href="/om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+                <Link href="/vaare-merker" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
+                  Våre Merker
+                </Link>
+                <Link href="/om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
                   Om oss
                 </Link>
-                <Link href="/aktuelt" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
+                <Link href="/aktuelt" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="5">
                   Aktuelt
                 </Link>
               </div>
