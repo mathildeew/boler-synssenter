@@ -26,15 +26,16 @@ const apiQueries = (slug) => ({
     }  
     `,
 
-  servicesMetadata: `
-    *[_type == "servicesMetadata"][0]{
+  servicesInfo: `
+    *[_type == "servicesInfo"][0]{
       title,
-      description
+      description,
+      intro
     }  
     `,
 
   services: `
-    *[_type == "services"]| order(_createdAt desc){
+    *[_type == "services"]{
       _id,
       title,
       "imageUrl": image.asset->url,

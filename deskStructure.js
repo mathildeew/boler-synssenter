@@ -30,7 +30,7 @@ export const myStructure = (S) =>
         .child(
           S.list()
             .title("Våre tjenester")
-            .items([S.listItem().title("Metadata").icon(InfoOutlineIcon).child(S.document().schemaType("servicesMetadata").documentId("servicesMetadata")), S.listItem().title("Våre tjenester").icon(AddCircleIcon).child(S.documentTypeList("services"))])
+            .items([S.listItem().title("Info").icon(InfoOutlineIcon).child(S.document().schemaType("servicesInfo").documentId("servicesInfo")), S.listItem().title("Våre tjenester").icon(AddCircleIcon).child(S.documentTypeList("services"))])
         ),
 
       S.listItem()
@@ -51,5 +51,5 @@ export const myStructure = (S) =>
             .items([S.listItem().title("Metadata").icon(InfoOutlineIcon).child(S.document().schemaType("newsMetadata").documentId("newsMetadata")), S.listItem().title("Artikler").icon(AddCircleIcon).child(S.documentTypeList("article"))])
         ),
 
-      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesMetadata", "services", "aboutMetadata", "newsMetadata", "hero", "about", "article"].includes(listItem.getId())),
+      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesInfo", "services", "aboutMetadata", "newsMetadata", "hero", "about", "article"].includes(listItem.getId())),
     ]);

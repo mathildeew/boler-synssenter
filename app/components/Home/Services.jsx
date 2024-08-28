@@ -20,8 +20,6 @@ export default function Services() {
     getData();
   }, [fetchApi]);
 
-  console.log(servicesData);
-
   return (
     <section className="bg-lightPurple w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
       <div className="text-darkPurple text-center max-w-3xl flex flex-col gap-10 items-center">
@@ -33,69 +31,16 @@ export default function Services() {
       </div>
 
       <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-10">
-        {servicesData?.map((service) => {
+        {servicesData?.map((service) => (
           <div key={service._id} className="w-full flex flex-col items-center gap-4 sm:w-48">
             <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
               <div className="w-20">
-                <Image src={service.imageUrl} width={144} height={144} layout="responsive" alt={service.imageAlt} />
+                <Image src={service.imageUrl} width={144} height={144} alt={service.imageAlt} />
               </div>
             </div>
-            <p className="font-medium">{service.title}</p>
-          </div>;
-        })}
-        {/* <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-20">
-              <Image src="/icons/synsundersokelse.svg" width={144} height={144} layout="responsive" alt="Synsundersøkelse ikon" />
-            </div>
+            <p className="font-medium text-center">{service.title}</p>
           </div>
-          <p className="font-medium">Synsundersøkelse</p>
-        </div> */}
-
-        {/* <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-24">
-              <Image src="/icons/oyehelse.svg" width={144} height={144} layout="responsive" alt="Øyehelse ikon" />
-            </div>
-          </div>
-          <p className="font-medium">Øyehelse</p>
-        </div>
-
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-20">
-              <Image src="/icons/kontaktlinser.svg" width={144} height={144} layout="responsive" alt="Kontaktlinser ikon" />
-            </div>
-          </div>
-          <p className="font-medium">Kontaktlinser</p>
-        </div>
-
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-20">
-              <Image src="/icons/synstrening.svg" width={144} height={144} layout="responsive" alt="Synstrening ikon" />
-            </div>
-          </div>
-          <p className="font-medium">Synstrening</p>
-        </div>
-
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-24">
-              <Image src="/icons/frames.svg" width={144} height={144} layout="responsive" alt="Brilleikon" />
-            </div>
-          </div>
-          <p className="font-medium text-center">Innfatninger &#38; solbriller</p>
-        </div>
-
-        <div className="w-full flex flex-col items-center gap-4 sm:w-48">
-          <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
-            <div className="w-24">
-              <Image src="/icons/forerkortattest.svg" width={144} height={144} layout="responsive" alt="Førerkortattest ikon" />
-            </div>
-          </div>
-          <p className="font-medium">Førerkortattest</p>
-        </div> */}
+        ))}
       </div>
     </section>
   );
