@@ -52,7 +52,7 @@ const apiQueries = (slug) => ({
     `,
 
   brands: `
-    *[_type == "brands"]{
+    *[_type == "brands"] | order(name asc){
       _id,
       name,
       carousel,

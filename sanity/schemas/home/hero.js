@@ -30,13 +30,13 @@ const hero = {
       ],
     },
     {
-      name: "Tekst",
+      name: "text",
+      title: "Tekst",
       type: "text",
-      description: "Kort beskrivende og engasjerende tekst.",
+      description: "Kort og engasjerende tekst",
       rows: 4,
-      validation: (rule) => rule.required().max(160).error("Må være mindre enn 160 tegn."),
+      validation: (rule) => rule.required(),
     },
-
     {
       name: "link",
       title: "Link",

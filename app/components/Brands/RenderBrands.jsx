@@ -21,16 +21,17 @@ export default function OurBrands() {
   }, [fetchApi]);
 
   return (
-    <section className="w-full grid gap-10">
+    <section className="w-full grid gap-10 md:grid-cols-2 lg:grid-cols-3">
       {brands.map((brand) => (
-        <div key={brand._id}>
+        <div key={brand._id} className="flex flex-col gap-2">
           <div className="h-36 relative">
             <Image src={urlFor(brand.carousel[0].image.asset._ref).url()} alt={brand.carousel[0].altText} objectFit="cover" fill sizes="auto" className="w-full h-full rounded-xl" />
           </div>
           <a href={brand.url} className="flex gap-2 items-center hover:underline">
-            <h2>{brand.name}</h2>
+            <h3>{brand.name}</h3>
             <FontAwesomeIcon icon={faArrowRightLong} size="xs" />
           </a>
+          <p>{brand.info}</p>
         </div>
       ))}
     </section>

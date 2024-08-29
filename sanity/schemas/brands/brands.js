@@ -26,7 +26,7 @@ const brands = {
       title: "Info",
       type: "text",
       description: "Info om merket.",
-      rows: 2,
+      rows: 6,
     },
     {
       name: "url",

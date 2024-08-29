@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Revalidate the page every 60 seconds
+export const revalidate = 1;
+
 export default function Hero({ heroData }) {
   const { title, text, imageUrl, imageAlt, link } = heroData;
+  console.log(heroData);
 
   return (
     <section className="bg-darkBeige w-full lg:h-[500px]">
@@ -20,4 +24,6 @@ export default function Hero({ heroData }) {
       </div>
     </section>
   );
+
+  // "Å passe på synet er avgjørende for å opprettholde god livskvalitet og forebygge alvorlige øyesykdommer."
 }
