@@ -24,6 +24,7 @@ const servicesInfo = {
       title: "Intro",
       type: "text",
       rows: 4,
+      description: "Intro øverst på siden.",
       validation: (rule) => rule.required(),
     },
   ],

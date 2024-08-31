@@ -60,5 +60,5 @@ export const myStructure = (S) =>
             .items([S.listItem().title("Metadata").icon(InfoOutlineIcon).child(S.document().schemaType("newsMetadata").documentId("newsMetadata")), S.listItem().title("Artikler").icon(AddCircleIcon).child(S.documentTypeList("article"))])
         ),
 
-      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesInfo", "services", "brandsMetadata", "aboutMetadata", "newsMetadata", "hero", "about", "article"].includes(listItem.getId())),
+      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesInfo", "services", "brandsMetadata", "brands", "aboutMetadata", "newsMetadata", "hero", "about", "article"].includes(listItem.getId())),
     ]);

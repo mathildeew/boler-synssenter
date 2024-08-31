@@ -5,6 +5,7 @@ import apiQueries from "../../../sanity/apiQueries";
 import Loader from "../UI/Loader";
 import Error from "../UI/Error";
 import Hero from "./Hero";
+import Brands from "./Brands";
 import News from "./News";
 import Services from "./Services";
 
@@ -29,6 +30,8 @@ export default function HomePageContent() {
         <div data-animate-in="true" className="flex flex-col gap-20">
           <Hero heroData={heroData} />
           <Services />
+          <Brands />
+
           <News />
         </div>
       )}
