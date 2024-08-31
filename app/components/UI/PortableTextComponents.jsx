@@ -7,9 +7,7 @@ export const PortableTextComponents = {
     image: ({ value }) => {
       return (
         <div className="mb-6">
-          <div className="w-full relative pt-[100%]">
-            <Image src={urlFor(value).url()} alt={value.alt} objectFit="cover" fill className="w-full h-full top-0 left-0 object-cover object-center rounded-xl" />
-          </div>
+          <Image src={urlFor(value).url()} alt={value.alt} width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} className="rounded-xl" />
           {value.desc && <figcaption className="text-sm text-center md:text-lg">{value.desc}</figcaption>}
         </div>
       );

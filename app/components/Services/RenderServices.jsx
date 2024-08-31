@@ -24,7 +24,7 @@ export default function RenderServices() {
         <div key={service._id} className={`h-full flex flex-wrap justify-center gap-4 px-8 py-14 rounded-3xl ${backgroundColors[index % backgroundColors.length]} ${index % 3 === 0 && "sm:col-span-2 lg:col-span-1"}`}>
           <div className="flex flex-col items-center gap-2">
             <div className="w-36">
-              <Image src={service.imageUrl} width={144} height={144} alt={service.imageAlt} />
+              <Image src={service.imageUrl} width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} alt={service.imageAlt} />
             </div>
             <h2 className="font-medium">{service.title}</h2>
           </div>
