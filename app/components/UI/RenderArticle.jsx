@@ -9,7 +9,7 @@ export default function RenderArticle({ title, article }) {
         <h1>{title}</h1>
         <span className="text-xl text-center md:text-3xl">{article.intro}</span>
         <div className="w-full h-[300px] md:h-[600px] relative">
-          <Image src={article.imageUrl} alt={article.imageAlt} width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} priority={true} placeholder="blur" blurDataURL="jpg" className="rounded-xl" />
+          <Image src={article.imageUrl} alt={article.imageAlt} width={0} height={0} sizes="100vw" style={{ width: "100%", height: "100%" }} priority={true} placeholder="blur" blurDataURL="jpg" className="rounded-xl object-cover" />
         </div>
       </section>
       <section className="max-w-[700px] mx-auto">
