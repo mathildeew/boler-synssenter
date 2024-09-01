@@ -30,8 +30,8 @@ export default function HomePageContent() {
         <div data-animate-in="true" className="flex flex-col gap-20">
           <Hero heroData={heroData} />
           <Services />
-          {/* <Brands /> */}
-          <News />
+          <Brands />
+          {/* <News /> */}
         </div>
       )}
 
