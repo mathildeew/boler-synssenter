@@ -6,12 +6,13 @@ import Link from "next/link";
 
 export default function Brands() {
   const [brandsData, setBrandsData] = useState([]);
-  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
+  const { fetchApi } = useAPI();
 
   useEffect(() => {
     const getData = async () => {
       const result = await fetchApi(apiQueries().brands);
-      setBrandsData(result.slice(0, 8));
+      setBrandsData(result);
+      console.log(result);
     };
 
     getData();

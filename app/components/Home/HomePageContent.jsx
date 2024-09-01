@@ -31,7 +31,7 @@ export default function HomePageContent() {
           <Hero heroData={heroData} />
           <Services />
           <Brands />
-          {/* <News /> */}
+          <News />
         </div>
       )}
 
