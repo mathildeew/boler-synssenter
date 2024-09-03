@@ -55,6 +55,17 @@ export default function Header() {
               Våre tjenester
             </Link>
             <Link
+              href="/vaare-merker"
+              className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
+              data-animate-in="true"
+              data-animation-order="4"
+              onClick={() => {
+                toogleLocked(false), setOpenMenu(false);
+              }}
+            >
+              Våre merker
+            </Link>
+            <Link
               href="/om-oss"
               className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
               data-animate-in="true"
@@ -107,7 +118,7 @@ export default function Header() {
                   Våre tjenester
                 </Link>
                 <Link href="/vaare-merker" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="3">
-                  Våre Merker
+                  Våre merker
                 </Link>
                 <Link href="/om-oss" className="text-darkPurple text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="4">
                   Om oss
