@@ -6,7 +6,7 @@ export default function RenderNews(data) {
   const [articleId, setArticleId] = useState(null);
 
   return (
-    <div className="max-w-[1460px] w-full grid grid-cols-news gap-6 overflow-x-auto snap-[x mandatory] gridExpand:grid-cols-2 lg:grid-cols-4 lg:gap-10 cardGrid">
+    <div className="max-w-[1460px] w-full grid grid-cols-news gap-6 overflow-x-auto overflow-y-hidden snap-[x mandatory] gridExpand:grid-cols-2 lg:grid-cols-4 lg:gap-10 cardGrid">
       {articles.map((article) => {
         return (
           <Link
