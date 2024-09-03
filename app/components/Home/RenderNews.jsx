@@ -6,7 +6,7 @@ export default function RenderNews(data) {
   const [articleId, setArticleId] = useState(null);
 
   return (
-    <div className="max-w-[1460px] w-full grid grid-cols-news gap-6 overflow-x-auto snap-[x mandatory] gridExpand:grid-cols-2 lg:grid-cols-4 cardGrid">
+    <div className="max-w-[1460px] w-full grid grid-cols-news gap-6 overflow-x-auto snap-[x mandatory] gridExpand:grid-cols-2 lg:grid-cols-4 lg:gap-10 cardGrid">
       {articles.map((article) => {
         return (
           <Link
@@ -26,7 +26,7 @@ export default function RenderNews(data) {
                   <Image src={article.image} alt={article.name} width={1000} height={1000} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
               </div>
-              <div className="text-left h-fit line-clamp-6">
+              <div className="text-left line-clamp-[10] md:line-clamp-none">
                 <h3>{article.name}</h3>
                 <p>{article.intro}</p>
               </div>
