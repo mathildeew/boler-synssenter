@@ -22,6 +22,7 @@ module.exports = {
       screens: {
         gridExpand: "600px",
       },
+      
     },
   },
   plugins: [],
