@@ -6,10 +6,11 @@ export default function Footer() {
   const { address, mail, openingHours, phone } = useStoreInfo();
 
   return (
-    <footer className="bg-lightBeige w-full">
-      <div className="footerContainer bg-darkPurple flex justify-center px-4 py-16 md:px-10 md:py-28 lg:px-16">
+    <footer className="w-full">
+      <img src="/dotted.svg" className="w-full" />
+      <div className=" flex flex-col justify-center px-4 md:px-10 lg:px-16">
         {/* <BolerLogo /> */}
-        <div className="w-full max-w-[1460px] text-lightBlue grid gap-12 md:grid-cols-2">
+        <div className="w-full max-w-[1460px] grid gap-12 md:grid-cols-2">
           <div className="flex flex-col gap-5">
             <h3>Åpningstider</h3>
             <div className="flex flex-col gap-3">

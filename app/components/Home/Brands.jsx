@@ -11,12 +11,15 @@ export default function Brands() {
   useEffect(() => {
     const getData = async () => {
       const result = await fetchApi(apiQueries().brands);
-      setBrandsData(result);
-      console.log(result);
+      const filteredData = result.filter((brand) => brand.inFocus === true);
+      const limitedData = filteredData.slice(0, 8);
+      setBrandsData(limitedData);
     };
 
     getData();
   }, [fetchApi]);
+
+  console.log(brandsData);
 
   return (
     <section className="w-full flex flex-col items-center gap-10">
@@ -25,13 +28,13 @@ export default function Brands() {
         {brandsData.map((brand, index) => (
           <div key={index} className="w-full h-32 relative md:h-56 xl:h-96">
             <div className="w-full h-full bg-gray-600 bg-opacity-55 absolute top-0 z-10"></div>
-            <div className="w-full h-full bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(${urlFor(brand.carousel[0].image.asset._ref).url()})` }}>
+            <div className="w-full h-full bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(${brand.focusUrl})` }}>
               <h2 className="text-white relative z-20">{brand.name}</h2>
             </div>
           </div>
         ))}
       </div>
-      <Link href="/vaare-merker" className="baseButton text-lightBeige">
+      <Link href="/vaare-merker" className="baseButton text-lightestBlue">
         Se alle merker
       </Link>
     </section>

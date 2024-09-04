@@ -54,6 +54,9 @@ const apiQueries = (slug) => ({
   brands: `
     *[_type == "brands"] | order(name asc){
       _id,
+      inFocus,
+      "focusUrl": focusImage.asset->url,
+      "focusAlt": focusImage.alt,
       name,
       carousel,
       info,

@@ -9,7 +9,8 @@ module.exports = {
         darkBeige: "#faf3e9",
         lightBlue: "#C4E5FA",
         lightPurple: "#C9CDFA",
-        darkPurple: "#050A53",
+        darkPurple: "#0F4996",
+        // darkPurple: "#050A53",
         skyBlue: "#4DAEEA",
       },
       fontFamily: {
@@ -22,7 +23,6 @@ module.exports = {
       screens: {
         gridExpand: "600px",
       },
-      
     },
   },
   plugins: [],
