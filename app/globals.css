@@ -83,24 +83,6 @@
     fill: theme(colors.logoBlue);
   }
 
-  /* FOOTER - - - - - - - - - - */
-  .footerContainer {
-    margin-top: auto;
-
-    --size: 12px;
-    --R: calc(var(--size) * 1.28);
-
-    -webkit-mask:
-      radial-gradient(var(--R) at 50% calc(1.8 * var(--size)), #000 99%, #0000 101%) calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
-      radial-gradient(var(--R) at 50% calc(-0.8 * var(--size)), #0000 99%, #000 101%) 50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
-  }
-
-  footer #logo {
-    width: 100px;
-    height: auto;
-    stroke: theme(colors.lightBlue);
-  }
-
   /* ANIMATIONS - - - - - - - - - - */
   @keyframes animate-in-from-bottom {
     0% {
@@ -165,6 +147,7 @@
     -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
     animation: l13 1s infinite linear;
   }
+
   @keyframes l13 {
     100% {
       transform: rotate(1turn);

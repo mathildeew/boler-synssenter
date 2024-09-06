@@ -7,16 +7,11 @@ module.exports = {
       colors: {
         lightBeige: "#fffcf4",
         darkBeige: "#faf3e9",
-        // lightBlue: "#C4E5FA",
         lightBlue: "#f9f9ff",
         logoBlue: "#127cc4",
         darkBlue: "#0f4996",
         skyBlue: "#CFE8FA",
         textBlue: "#10305D",
-        lightPurple: "#C9CDFA",
-        darkPurple: "#0F4996",
-        // darkPurple: "#050A53",
-        lightYellow: "#f6c649",
       },
       fontFamily: {
         sans: ["futura-pt, Arial, Tahoma, sans-serif"],
