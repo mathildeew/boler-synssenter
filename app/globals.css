@@ -67,8 +67,11 @@
   /* HEADER - - - - - - - - - - */
   header #logo {
     width: auto;
-    height: 19.5px;
-    stroke: theme(colors.darkPurple);
+    /* height: 30px; */
+  }
+
+  header #logoEye {
+    fill: theme(colors.logoBlue);
   }
 
   /* FOOTER - - - - - - - - - - */
