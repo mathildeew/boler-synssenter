@@ -23,6 +23,15 @@
   }
 
   /* GLOBALS - - - - - - - - - - */
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  li {
+    color: theme(colors.textBlue);
+  }
+
   h1 {
     @apply text-5xl text-center font-serif;
   }

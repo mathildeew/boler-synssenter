@@ -26,7 +26,7 @@ export default function NewsComponent() {
       {isLoading && <Loader />}
 
       {isSuccess && (
-        <section className="text-darkPurple grid gap-8 px-4 py-16 md:px-10 md:py-20 lg:gap-12" data-animate-in="true">
+        <section className="grid gap-8 px-4 py-16 md:px-10 md:py-20 lg:gap-12" data-animate-in="true">
           <h1>Aktuelt</h1>
           <div className="max-w-[1460px] grid gap-8 overflow-auto grid-cols sm:grid-cols-2 lg:grid-cols-4">
             {articles.map((article) => {
@@ -41,7 +41,7 @@ export default function NewsComponent() {
                     setArticleId(null);
                   }}
                 >
-                  <div className="text-darkPurple flex flex-col gap-3 snap-center">
+                  <div className="flex flex-col gap-3 snap-center">
                     <div className="w-full h-72 rounded-3xl overflow-hidden">
                       <div className={`w-full h-72 transition-all ease-in-out duration-300 overflow-hidden ${articleId === article._id ? "scale-[110%]" : "scale-1"}`}>
                         <Image src={article.image} alt={article.name} width={1000} height={1000} style={{ width: "100%", height: "100%", objectFit: "cover" }} priority={true} placeholder="blur" blurDataURL="jpg" />

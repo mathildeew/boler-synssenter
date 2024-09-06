@@ -22,8 +22,8 @@ export default function Brands() {
   console.log(brandsData);
 
   return (
-    <section className="w-full flex flex-col items-center gap-10">
-      <h1 className="text-darkPurple"> Våre merker</h1>
+    <section className="text-textBlue w-full flex flex-col items-center gap-10 py-16 md:py-20-">
+      <h1> Våre merker</h1>
       <div className="w-full grid grid-cols-2 gap-4 lg:grid-cols-4">
         {brandsData.map((brand, index) => (
           <div key={index} className="w-full h-32 relative md:h-56 xl:h-96">
@@ -34,7 +34,7 @@ export default function Brands() {
           </div>
         ))}
       </div>
-      <Link href="/vaare-merker" className="baseButton text-lightestBlue">
+      <Link href="/vaare-merker" className="baseButton text-white hover:bg-logoBlue">
         Se alle merker
       </Link>
     </section>

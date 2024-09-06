@@ -21,10 +21,10 @@ export default function News() {
   }, [fetchApi]);
 
   return (
-    <section className="bg-lightBlue w-full flex flex-col items-center justify-center gap-10 pl-4 py-16 md:px-10 md:py-20">
-      <h2 className="text-5xl text-center font-serif text-darkPurple">Nytt fra oss</h2>
+    <section className="bg-skyBlue w-full flex flex-col items-center justify-center gap-10 pl-4 py-16 md:px-10 md:py-20">
+      <h2 className="text-5xl text-center font-serif">Nytt fra oss</h2>
       <RenderNews data={articles} />
-      <Link href="aktuelt" className="baseButton text-lightBlue">
+      <Link href="aktuelt" className="baseButton text-white hover:bg-logoBlue">
         Se alle nyheter
       </Link>
     </section>

@@ -21,11 +21,11 @@ export default function Services() {
   }, [fetchApi]);
 
   return (
-    <section className="bg-lightPurple w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
-      <div className="text-darkPurple text-center max-w-3xl flex flex-col gap-10 items-center">
-        <h2 className="text-5xl text-center font-serif text-darkPurple">Vår kunnskap er din trygghet</h2>
+    <section className="w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
+      <div className="text-center max-w-3xl flex flex-col gap-10 items-center">
+        <h2 className="text-5xl text-center font-serif">Vår kunnskap er din trygghet</h2>
         <p>Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell, dedikert til å gi deg best mulig øyehelse. Med høy kompetanse og lang erfaring sørger vi for at du får en profesjonell og trygg opplevelse ved hver synsundersøkelse og konsultasjon. </p>
-        <Link href="/vaare-tjenester" className="baseButton text-lightPurple">
+        <Link href="/vaare-tjenester" className="baseButton text-white hover:bg-logoBlue">
           Les mer om våre tjenester
         </Link>
       </div>
@@ -33,7 +33,7 @@ export default function Services() {
       <div className="bg-white w-full max-w-[1460px] flex flex-wrap justify-center gap-8 px-8 py-14 rounded-3xl md:gap-10">
         {servicesData?.map((service) => (
           <div key={service._id} className="w-full flex flex-col items-center gap-4 sm:w-48">
-            <div className="bg-lightBeige w-32 h-32 flex items-center justify-center rounded-full">
+            <div className="bg-skyBlue w-32 h-32 flex items-center justify-center rounded-full">
               <div className="w-20">
                 <Image src={service.imageUrl} width={144} height={144} alt={service.imageAlt} />
               </div>
