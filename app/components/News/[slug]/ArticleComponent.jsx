@@ -31,7 +31,7 @@ export default function ArticleComponent({ params }) {
           <Link href="/aktuelt" className="hover:underline">
             ← Aktuelt
           </Link>
-          <RenderArticle title={article.name} article={article} />
+          <RenderArticle title={article.title} article={article} />
         </article>
       )}
 

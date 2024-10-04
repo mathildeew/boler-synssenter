@@ -44,10 +44,10 @@ export default function NewsComponent() {
                   <div className="flex flex-col gap-3 snap-center">
                     <div className="w-full h-72 rounded-3xl overflow-hidden">
                       <div className={`w-full h-72 transition-all ease-in-out duration-300 overflow-hidden ${articleId === article._id ? "scale-[110%]" : "scale-1"}`}>
-                        <Image src={article.image} alt={article.name} width={1000} height={1000} style={{ width: "100%", height: "100%", objectFit: "cover" }} priority={true} placeholder="blur" blurDataURL="jpg" />
+                        <Image src={article.image} alt={article.title} width={1000} height={1000} style={{ width: "100%", height: "100%", objectFit: "cover" }} priority={true} placeholder="blur" blurDataURL="jpg" />
                       </div>
                     </div>
-                    <h3>{article.name}</h3>
+                    <h3>{article.title}</h3>
                     <p>{article.intro}</p>
                   </div>
                 </Link>

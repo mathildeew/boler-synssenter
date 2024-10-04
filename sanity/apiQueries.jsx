@@ -97,7 +97,7 @@ const apiQueries = (slug) => ({
   articles: `
     *[_type == "article"]| order(_createdAt desc){
       _id,
-      name,
+      title,
       intro,
       "slug": slug.current,
       "image": image.asset -> url,
@@ -112,7 +112,7 @@ const apiQueries = (slug) => ({
       "slug": slug.current,
       "imageAlt": image.alt,
       "imageUrl": image.asset->url,
-      name,
+      title,
       intro,
       content
     }

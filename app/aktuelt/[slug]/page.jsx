@@ -1,4 +1,5 @@
 import { client } from "../../../sanity/sanity-utils";
+import { useMetadata } from "../../hooks/useMetadata";
 import apiQueries from "../../../sanity/apiQueries";
 import ArticleComponent from "../../components/News/[slug]/ArticleComponent";
 
@@ -7,12 +8,19 @@ export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
   const slug = params.slug;
-  const article = await client.fetch(apiQueries(slug).article);
+  return await useMetadata("article", slug);
+}
 
-  return {
-    title: `${article.name} | Bøler Synssenter`,
-    description: article.intro,
-  };
+export async function generateStaticParams() {
+  const slugs = await client.fetch(`
+    *[_type == "article"]{
+      "slug": slug.current
+    }
+  `);
+
+  return slugs.map((article) => ({
+    slug: article.slug,
+  }));
 }
 
 export default function Article({ params }) {
