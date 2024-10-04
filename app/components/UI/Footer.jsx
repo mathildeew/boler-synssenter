@@ -26,9 +26,9 @@ export default function Footer() {
 
           <div className="grid">
             <h3>Kontakt oss</h3>
-            <div className="grid">
-              <div>
-                <p>{phone}</p>
+            <div className="grid gap-4">
+              <div className="grid">
+                <a href={`tel:${phone}`}>{phone}</a>
                 <a href={`mailto:${mail}`}>{mail}</a>
               </div>
               <div>
