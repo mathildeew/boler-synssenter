@@ -1,5 +1,5 @@
-const homeMetadata = {
-  name: "homeMetadata",
+const servicesMetadata = {
+  name: "servicesMetadata",
   title: "Metadata",
   type: "document",
   fields: [
@@ -21,4 +21,4 @@ const homeMetadata = {
   ],
 };
 
-export default homeMetadata;
+export default servicesMetadata;

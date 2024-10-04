@@ -1,6 +1,7 @@
 import siteSettings from "./storeInfo.js";
 import homeMetadata from "./home/metadata.js";
 import hero from "./home/hero.js";
+import servicesMetadata from "./services/metadata.js";
 import servicesInfo from "./services/info.js";
 import services from "./services/services.js";
 import brandsMetadata from "./brands/metadata.js";
@@ -11,6 +12,6 @@ import newsMetadata from "./news/metadata.js";
 import articles from "./news/article.js";
 import imageCarousel from "./utils/carousel.js";
 
-const schemas = [siteSettings, homeMetadata, hero, servicesInfo, services, brandsMetadata, brands, aboutMetadata, about, newsMetadata, articles, imageCarousel];
+const schemas = [siteSettings, homeMetadata, hero, servicesMetadata, servicesInfo, services, brandsMetadata, brands, aboutMetadata, about, newsMetadata, articles, imageCarousel];
 
 export default schemas;

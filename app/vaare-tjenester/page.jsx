@@ -7,7 +7,7 @@ import RenderServices from "../components/Services/RenderServices";
 export const revalidate = 60;
 
 export async function generateMetadata() {
-  const servicesInfo = await client.fetch(apiQueries().servicesInfo);
+  const servicesInfo = await client.fetch(apiQueries().servicesMetadata);
 
   return {
     title: `${servicesInfo.title}`,

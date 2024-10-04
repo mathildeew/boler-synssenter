@@ -15,7 +15,7 @@ const newsMetadata = {
       title: "Beskrivelse",
       type: "text",
       rows: 4,
-      description: "Kortfattet, mellom 150-160 tegn og inkludere relevante nøkkelord for å tiltrekke det riktige publikum.",
+      description: "Kortfattet, mellom 150-160 tegn og inkluder relevante nøkkelord for å tiltrekke det riktige publikum.",
       validation: (rule) => rule.required(),
     },
   ],

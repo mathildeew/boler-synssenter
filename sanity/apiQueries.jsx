@@ -26,6 +26,13 @@ const apiQueries = (slug) => ({
     }  
     `,
 
+  servicesMetadata: `
+    *[_type == "servicesMetadata"][0]{
+      title,
+      description
+    }  
+    `,
+
   servicesInfo: `
     *[_type == "servicesInfo"][0]{
       title,

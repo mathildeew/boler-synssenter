@@ -5,20 +5,11 @@ const servicesInfo = {
   fields: [
     {
       name: "title",
-      title: "Metadata: Tittel",
+      title: `Alt som endres her, endres på "Våre tjenester" siden`,
       type: "string",
-      description: "Kort og konsis. Bruk relevante nøkkelord og sørg for at tittelen fanger oppmerksomheten til leserne.",
-      validation: (rule) => rule.required(),
+      initialValue: "Våre tjenester",
+      readOnly: true,
     },
-    {
-      name: "description",
-      title: "Metadata: Beskrivelse",
-      type: "text",
-      rows: 4,
-      description: "Kortfattet, mellom 150-160 tegn og inkludere relevante nøkkelord for å tiltrekke det riktige publikum.",
-      validation: (rule) => rule.required(),
-    },
-
     {
       name: "intro",
       title: "Intro",
