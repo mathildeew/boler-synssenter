@@ -28,7 +28,7 @@ export default function NewsComponent() {
       {isSuccess && (
         <section className="grid gap-8 px-4 py-16 md:px-10 md:py-20 lg:gap-12" data-animate-in="true">
           <h1>Aktuelt</h1>
-          {/* <div className="max-w-[1460px] grid gap-8 overflow-auto grid-cols sm:grid-cols-2 lg:grid-cols-4">
+          <div className="max-w-[1460px] grid gap-8 overflow-auto grid-cols sm:grid-cols-2 lg:grid-cols-4">
             {articles.map((article) => {
               return (
                 <Link
@@ -53,7 +53,7 @@ export default function NewsComponent() {
                 </Link>
               );
             })}
-          </div> */}
+          </div>
         </section>
       )}
 

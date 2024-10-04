@@ -6,9 +6,9 @@ import { getMetadata } from "../hooks/getMetadata";
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
 
-// export async function generateMetadata() {
-//   return await getMetadata("brandsMetadata");
-// }
+export async function generateMetadata() {
+  return await getMetadata("brandsMetadata");
+}
 
 export default function OurBrands() {
   return (

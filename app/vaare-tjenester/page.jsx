@@ -7,12 +7,12 @@ import { getMetadata } from "../hooks/getMetadata";
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
 
-// export async function generateMetadata() {
-//   return await getMetadata("servicesMetadata");
-// }
+export async function generateMetadata() {
+  return await getMetadata("servicesMetadata");
+}
 
 export default async function Tjenester() {
-  // const servicesInfo = await client.fetch(apiQueries().servicesInfo);
+  const servicesInfo = await client.fetch(apiQueries().servicesInfo);
 
   return (
     <div className="max-w-[1460px] flex flex-col gap-20 items-center px-4 py-16 md:px-10 md:py-20" data-animate-in="true">
