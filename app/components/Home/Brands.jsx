@@ -19,8 +19,6 @@ export default function Brands() {
     getData();
   }, [fetchApi]);
 
-  console.log(brandsData);
-
   return (
     <section className="text-textBlue w-full flex flex-col items-center gap-10 py-16 md:py-20-">
       <h1> Våre merker</h1>
