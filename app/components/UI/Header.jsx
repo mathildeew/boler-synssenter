@@ -17,7 +17,7 @@ export default function Header() {
     <>
       <header>
         <div className="bg-lightBlue w-full flex justify-between items-center px-4 py-4 relative z-20 lg:hidden">
-          <Link href="/">
+          <Link href="/" aria-label="Logo" title="Forside">
             <BolerLogo />
           </Link>
 

@@ -7,8 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-lightBlue w-full grid gap-8 py-10 md:gap-14">
-      <img src="/dotted.svg" className="w-full" />
-      <div className=" flex flex-col justify-center px-4 md:px-10 lg:px-16">
+      <img src="/dotted.svg" alt="" className="w-full" />
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-16">
         <div className="w-full max-w-[1460px] grid gap-12 md:grid-cols-2">
           <div className="grid">
             <h3>Åpningstider</h3>
