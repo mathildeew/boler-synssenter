@@ -1,11 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+export const metadata = {
+  title: "En feil har oppstått!",
+};
 
 export default function Error() {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center gap-4">
-      <FontAwesomeIcon icon={faEye} size="4x" />
-      <p>En feil har oppstått, prøv igjen senere</p>
+    <section className="text-textBlue h-[700px] flex flex-col items-center justify-center gap-10 px-4 py-16 md:px-10 md:py-20">
+      <h1>En feil har oppstått!</h1>
+      <p>Det ser ut som noe har gått litt i surr. Prøv igjen senere.</p>
     </section>
   );
 }

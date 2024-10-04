@@ -1,14 +1,14 @@
 import { client } from "../../../sanity/sanity-utils";
-import { useMetadata } from "../../hooks/useMetadata";
+import { getMetadata } from "../../hooks/getMetadata";
 import ArticleComponent from "../../components/News/[slug]/ArticleComponent";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
 
-export async function generateMetadata({ params }) {
-  const slug = params.slug;
-  return await useMetadata("article", slug);
-}
+// export async function generateMetadata({ params }) {
+//   const slug = params.slug;
+//   return await getMetadata("article", slug);
+// }
 
 export async function generateStaticParams() {
   const slugs = await client.fetch(`
