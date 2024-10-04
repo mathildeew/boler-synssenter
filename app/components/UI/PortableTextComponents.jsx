@@ -21,7 +21,7 @@ export const PortableTextComponents = {
   block: {
     normal: ({ children }) => <p className="mb-4">{children}</p>,
     h1: ({ children }) => <h2 className="text-4xl font-sans text-left font-semibold mb-3">{children}</h2>,
-    h2: ({ children }) => <h3 className="text-3xl font-sans font-medium  tracking-wide">{children}</h3>,
+    h2: ({ children }) => <h3 className="text-3xl font-sans font-medium  tracking-wide mt-16">{children}</h3>,
     h3: ({ children }) => <h4 className="text-2xl font-sans font-medium tracking-wide">{children}</h4>,
     blockquote: ({ children }) => <blockquote className="text-xl border-l-darkBlue border-l-4 px-2">{children}</blockquote>,
     highlighted: ({ children }) => <span className="text-darkBlue text-3xl text-center bg-skyBlue bg-opacity-75 p-2 inline-block leading-10 rounded-xl my-5">{children}</span>,
