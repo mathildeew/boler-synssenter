@@ -7,7 +7,7 @@ const articles = {
   icon: BookIcon,
   fields: [
     {
-      name: "name",
+      name: "title",
       title: "Tittel",
       type: "string",
       description: "Tittelen på artikkelen.",
@@ -101,6 +101,13 @@ const articles = {
           ],
         },
       ],
+    },
+    {
+      name: "name",
+      title: "Tittel",
+      type: "string",
+      description: "Tittelen på artikkelen.",
+      hidden: ({ value }) => (value === undefined ? true : false),
     },
   ],
 };
