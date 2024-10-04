@@ -39,7 +39,7 @@ export default function Contact() {
               Send oss en e-post på {mail}, så tar vi kontakt så fort vi kan. Du kan også ringe oss på {phone}.
             </p>
           </div>
-          <Link href="/synsundersokelse" className="baseButton text-white mx-auto ">
+          <Link href="/synsundersokelse" className="baseButton text-white hover:bg-logoBlue">
             Bestill time
           </Link>
         </div>
