@@ -1,9 +1,9 @@
 import AboutPageContent from "../components/About/AboutPageContent";
+import { useMetadata } from "../hooks/useMetadata";
 
-export const metadata = {
-  title: "Bøler Synssenter | Om oss",
-  description: "Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell, dedikert til å gi deg best mulig øyehelse. Med høy kompetanse og lang erfaring sørger vi for at du får en profesjonell og trygg opplevelse ved hver synsundersøkelse og konsultasjon.",
-};
+export async function generateMetadata() {
+  return await useMetadata("aboutMetadata");
+}
 
 export default function About() {
   return <AboutPageContent />;

@@ -2,17 +2,13 @@ import { client } from "../../sanity/sanity-utils";
 import apiQueries from "../../sanity/apiQueries";
 import servicesInfo from "../../sanity/schemas/services/info";
 import RenderServices from "../components/Services/RenderServices";
+import { useMetadata } from "../hooks/useMetadata";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
 
 export async function generateMetadata() {
-  const servicesInfo = await client.fetch(apiQueries().servicesMetadata);
-
-  return {
-    title: `${servicesInfo.title}`,
-    description: `${servicesInfo.description}`,
-  };
+  return await useMetadata("servicesMetadata");
 }
 
 export default async function Tjenester() {

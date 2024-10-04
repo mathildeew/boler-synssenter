@@ -1,6 +1,5 @@
 import { client } from "../../../sanity/sanity-utils";
 import { useMetadata } from "../../hooks/useMetadata";
-import apiQueries from "../../../sanity/apiQueries";
 import ArticleComponent from "../../components/News/[slug]/ArticleComponent";
 
 // Revalidate the page every 60 seconds

@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong, faEyeLowVision } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Side ikke funnet | Bøler Synssenter",
+};
+
 export default function PageNotFound() {
   return (
     <section className="text-textBlue h-[700px] flex flex-col items-center justify-center gap-10 px-4 py-16 md:px-10 md:py-20">
