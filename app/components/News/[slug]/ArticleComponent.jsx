@@ -20,7 +20,7 @@ export default function ArticleComponent({ params }) {
     };
 
     getData();
-  }, [fetchApi]);
+  }, [fetchApi, slug]);
 
   return (
     <>

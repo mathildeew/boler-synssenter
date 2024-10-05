@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Revalidate the page every 60 seconds
-export const revalidate = 1;
+export const revalidate = 60;
 
 export default function Hero({ heroData }) {
   const { title, text, imageUrl, imageAlt, link } = heroData;
