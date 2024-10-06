@@ -3,21 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-icons";
+import { useStoreInfo } from "../../context/StoreInforProvider";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 
 export default function Contact() {
-  const [storeInfo, setStoreInfo] = useState([]);
-  const { fetchApi } = useAPI();
-
-  useEffect(() => {
-    const getData = async () => {
-      const result = await fetchApi(apiQueries().info);
-      setStoreInfo(result);
-    };
-
-    getData();
-  }, [fetchApi]);
+  const { mail, openingHours, phone } = useStoreInfo();
 
   return (
     <section className="bg-skyBlue w-full">
@@ -29,8 +20,8 @@ export default function Contact() {
               <h3>Åpningstider</h3>
             </div>
             <div className="flex flex-col">
-              <p>Mandag - fredag: {storeInfo.openingHours?.manToFre}</p>
-              <p>Lørdag: {storeInfo.openingHours?.sat}</p>
+              <p>Mandag - fredag: {openingHours.manToFre}</p>
+              <p>Lørdag: {openingHours.sat}</p>
             </div>
           </div>
 
@@ -48,7 +39,7 @@ export default function Contact() {
               <h3>Ta kontakt med oss direkte</h3>
             </div>
             <p>
-              Send oss en e-post på {storeInfo.mail}, så tar vi kontakt så fort vi kan. Du kan også ringe oss på {storeInfo.phone}.
+              Send oss en e-post på {mail}, så tar vi kontakt så fort vi kan. Du kan også ringe oss på {phone}.
             </p>
           </div>
           <Link href="/synsundersokelse" className="baseButton text-white hover:bg-logoBlue">

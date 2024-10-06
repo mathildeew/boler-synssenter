@@ -1,15 +1,16 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import apiQueries from "../../../sanity/apiQueries";
 import useAPI from "../../hooks/useAPI";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
+
 export default function Services() {
   const [servicesData, setServicesData] = useState([]);
-  const { fetchApi, isLoading, isSuccess, isError } = useAPI();
+  const { fetchApi } = useAPI();
 
   useEffect(() => {
     const getData = async () => {
@@ -23,7 +24,7 @@ export default function Services() {
   return (
     <section className="w-full flex flex-col gap-10 justify-center items-center px-4 py-16 md:px-10 md:py-20">
       <div className="text-center max-w-3xl flex flex-col gap-10 items-center">
-        <h2 className="text-5xl text-center font-serif">Vår kunnskap er din trygghet</h2>
+        <h2 className="text-5xl text-center font-serif">Dedikert til din øyehelse</h2>
         <p>Hos Bøler Synssenter er alle våre optikere autorisert helsepersonell, dedikert til å gi deg best mulig øyehelse. Med høy kompetanse og lang erfaring sørger vi for at du får en profesjonell og trygg opplevelse ved hver synsundersøkelse og konsultasjon. </p>
         <Link href="/vaare-tjenester" className="baseButton text-white hover:bg-logoBlue">
           Les mer om våre tjenester

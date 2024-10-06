@@ -30,5 +30,5 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+, "sanity.config.jsx"  ]
 }
