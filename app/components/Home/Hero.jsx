@@ -9,7 +9,7 @@ export default function Hero({ heroData }) {
   return (
     <section className="bg-skyBlue w-full lg:h-[500px]">
       <div className="h-full grid lg:grid-cols-2 md:items-center">
-        <div className="w-full h-96 relative lg:h-full">
+        <div className="w-full h-72 relative md:h-96 lg:h-full">
           <Image src={imageUrl} alt={imageAlt} fill="true" sizes="100" priority={true} placeholder="blur" blurDataURL="jpg" className="w-full h-full top-0 left-0 object-cover" />
         </div>
         <div className="text-textBlue flex flex-col gap-10 items-center px-4 py-10 md:px-10 lg:py-0">
