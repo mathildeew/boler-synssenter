@@ -1,11 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot, faComments } from "@fortawesome/free-solid-svg-icons";
 import { useStoreInfo } from "../../context/StoreInforProvider";
-import useAPI from "../../hooks/useAPI";
-import apiQueries from "../../../sanity/apiQueries";
 
 export default function Contact() {
   const { mail, openingHours, phone } = useStoreInfo();

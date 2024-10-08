@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { urlFor } from "../../../sanity/urlFor";
 import useAPI from "../../hooks/useAPI";
 import apiQueries from "../../../sanity/apiQueries";
 import Link from "next/link";

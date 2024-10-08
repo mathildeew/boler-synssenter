@@ -1,5 +1,3 @@
-import { client } from "../../sanity/sanity-utils";
-import apiQueries from "../../sanity/apiQueries";
 import RenderBrands from "../components/Brands/RenderBrands";
 import { getMetadata } from "../hooks/getMetadata";
 

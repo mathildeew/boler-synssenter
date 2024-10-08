@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
 import { useStoreInfo } from "../../context/StoreInforProvider";
-import apiQueries from "../../../sanity/apiQueries";
-import useAPI from "../../hooks/useAPI";
 
-export const revalidate = 1;
+// Revalidate the page every 60 seconds
+export const revalidate = 60;
 
 export default function Footer() {
   const { address, mail, openingHours, phone } = useStoreInfo();

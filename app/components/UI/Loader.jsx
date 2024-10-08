@@ -1,5 +1,3 @@
-import { SpinnerIcon } from "@sanity/icons";
-
 export default function Loader() {
   return (
     <section className="h-screen flex flex-col gap-6 items-center justify-center">

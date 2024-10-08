@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { useLockBodyScroll, useToggle } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

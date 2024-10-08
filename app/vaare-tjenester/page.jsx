@@ -1,6 +1,5 @@
 import { client } from "../../sanity/sanity-utils";
 import apiQueries from "../../sanity/apiQueries";
-import servicesInfo from "../../sanity/schemas/services/info";
 import RenderServices from "../components/Services/RenderServices";
 import { getMetadata } from "../hooks/getMetadata";
 
