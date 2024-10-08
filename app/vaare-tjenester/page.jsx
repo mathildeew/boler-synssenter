@@ -18,7 +18,7 @@ export default async function Tjenester() {
       <div className="max-w-[1000px] flex flex-col gap-8 items-center md:gap-12">
         <h1>Våre tjenester</h1>
         <span className="text-textBlue text-xl text-center md:text-3xl">{servicesInfo.intro}</span>
-        <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="baseButton text-white hover:bg-logoBlue">
+        <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="baseButton text-white hover:bg-logoBlue">
           Bestill time
         </a>
       </div>

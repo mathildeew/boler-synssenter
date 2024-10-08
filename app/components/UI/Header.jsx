@@ -38,7 +38,7 @@ export default function Header() {
 
         <nav className={`bg-lightBlue w-full h-screen absolute z-10 lg:hidden ${openMenu ? "visible" : "hidden"}`}>
           <div className="flex flex-col items-center gap-12 py-16">
-            <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+            <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
               Bestill time
             </a>
             <Link
@@ -85,7 +85,7 @@ export default function Header() {
             >
               Aktuelt
             </Link>
-            <a href="https://www.coptikk.no/linsebutikk" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="6">
+            <a href="https://www.coptikk.no/linsebutikk" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="6">
               Tom for linser? Bestill kontaktlinser
             </a>
           </div>
@@ -97,7 +97,7 @@ export default function Header() {
         <div className="w-full max-w-[1460px] flex flex-col justify-between mx-auto px-10 py-4">
           <div className="w-full flex justify-end items-center gap-4" data-animate-in="true" data-animation-order="6">
             <FontAwesomeIcon icon={faArrowRightLong} />
-            <a href="https://www.coptikk.no/linsebutikk" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2">
+            <a href="https://www.coptikk.no/linsebutikk" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2">
               Tom for linser? Bestill kontaktlinser
             </a>
           </div>
@@ -109,7 +109,7 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
-                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
                   Bestill time
                 </a>
                 <Link href="/vaare-tjenester" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
