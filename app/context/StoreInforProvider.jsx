@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useEffect, useState, useCallback, useMemo } from "react";
+import React, { createContext, useContext, useEffect, useState, useMemo } from "react";
 import useAPI from "../hooks/useAPI";
 import apiQueries from "../../sanity/apiQueries";
 
