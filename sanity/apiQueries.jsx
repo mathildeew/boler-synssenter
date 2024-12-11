@@ -117,6 +117,21 @@ const apiQueries = (slug) => ({
       content
     }
     `,
+
+  privacyMetadata: `
+    *[_type == "privacyMetadata"][0]{
+      title,
+      description
+    }  
+    `,
+
+  privacy: `
+   *[_type == "privacy"][0]{
+      title,
+      intro,
+      content
+    }  
+    `,
 });
 
 export default apiQueries;

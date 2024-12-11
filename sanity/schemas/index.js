@@ -11,7 +11,9 @@ import about from "./about/about.js";
 import newsMetadata from "./news/metadata.js";
 import articles from "./news/article.js";
 import imageCarousel from "./utils/carousel.js";
+import privacyMetadata from "./privacy/metadata.js";
+import privacy from "./privacy/privacy.js";
 
-const schemas = [siteSettings, homeMetadata, hero, servicesMetadata, servicesInfo, services, brandsMetadata, brands, aboutMetadata, about, newsMetadata, articles, imageCarousel];
+const schemas = [siteSettings, homeMetadata, hero, servicesMetadata, servicesInfo, services, brandsMetadata, brands, aboutMetadata, about, newsMetadata, articles, imageCarousel, privacyMetadata, privacy];
 
 export default schemas;

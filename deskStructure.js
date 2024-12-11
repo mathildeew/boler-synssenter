@@ -1,4 +1,4 @@
-import { EyeOpenIcon, CogIcon, AsteriskIcon, HeartIcon, HomeIcon, InfoOutlineIcon, SparklesIcon, ActivityIcon, AddCircleIcon, BasketIcon } from "@sanity/icons";
+import { EyeOpenIcon, CogIcon, AsteriskIcon, HeartIcon, HomeIcon, InfoOutlineIcon, SparklesIcon, ActivityIcon, AddCircleIcon, BasketIcon, WarningOutlineIcon } from "@sanity/icons";
 
 export const myStructure = (S) =>
   S.list()
@@ -60,5 +60,14 @@ export const myStructure = (S) =>
             .items([S.listItem().title("Metadata").icon(InfoOutlineIcon).child(S.document().schemaType("newsMetadata").documentId("newsMetadata")), S.listItem().title("Artikler").icon(AddCircleIcon).child(S.documentTypeList("article"))])
         ),
 
-      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesMetadata", "servicesInfo", "services", "brandsMetadata", "brands", "aboutMetadata", "newsMetadata", "hero", "about", "article"].includes(listItem.getId())),
+      S.listItem()
+        .title("Personvern")
+        .icon(WarningOutlineIcon)
+        .child(
+          S.list()
+            .title("Personvern")
+            .items([S.listItem().title("Metadata").icon(InfoOutlineIcon).child(S.document().schemaType("privacyMetadata").documentId("privacyMetadata")), S.listItem().title("Personvern").icon(WarningOutlineIcon).child(S.document().schemaType("privacy").documentId("privacy"))])
+        ),
+
+      ...S.documentTypeListItems().filter((listItem) => !["homeMetadata", "siteSettings", "servicesMetadata", "servicesInfo", "services", "brandsMetadata", "brands", "aboutMetadata", "newsMetadata", "hero", "about", "article", "privacyMetadata", "privacy"].includes(listItem.getId())),
     ]);

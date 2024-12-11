@@ -1,8 +1,9 @@
+import Link from "next/link";
+
 import { client } from "../../sanity/sanity-utils";
+import { getMetadata } from "../hooks/getMetadata";
 import apiQueries from "../../sanity/apiQueries";
 import RenderServices from "../components/Services/RenderServices";
-import { getMetadata } from "../hooks/getMetadata";
-import Link from "next/link";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;

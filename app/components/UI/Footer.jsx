@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useStoreInfo } from "../../context/StoreInforProvider";
 
 // Revalidate the page every 60 seconds
@@ -39,11 +40,18 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-2 items-center">
-            <p>Design og nettside av</p>
-            <a href="https://www.mathildeelinor.no" className="underline">
-              Mathilde Elinor
-            </a>
+          <div className=" flex flex-col gap-16">
+            <div className="flex gap-2 items-center">
+              <p>Design og nettside av</p>
+              <a href="https://www.mathildeelinor.no" className="underline">
+                Mathilde Elinor
+              </a>
+            </div>
+
+            <div>
+              <p>&copy; Bøler Synssenter</p>
+              <Link href="personvern">Personvern</Link>
+            </div>
           </div>
         </div>
       </div>
