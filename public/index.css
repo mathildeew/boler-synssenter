@@ -970,10 +970,11 @@
   overflow: hidden;
 }
 .coptikk-app .cop .member-label {
-  font-size: 20px;
+  font-size: 24px;
   /*  padding-bottom: 1rem; */
   /* Added styles */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #10305d;
 }
 .coptikk-app .cop .container {
   display: block;
@@ -1112,14 +1113,20 @@
 .coptikk-app .cop__header {
   font-weight: 700;
   margin: 11px 5px;
+  /* Added */
+  color: #10305d;
 }
 .coptikk-app .cop__header_with_sub {
   font-weight: 700;
   margin: 0 5px;
+  /* Added */
+  color: #10305d;
 }
 .coptikk-app .cop__sub-header {
   font-weight: 400;
   margin: 0 5px 20px;
+  /* Added */
+  color: #10305d;
 }
 .coptikk-app .cop__big-text-container {
   margin: 0;
@@ -1174,14 +1181,16 @@
 .coptikk-app .cop__member__name {
   /* padding-top: 10px; */
   width: 100%;
-  color: #161616;
+  /* color: #161616; */
   font-weight: 700;
+  color: #10305d;
 }
 .coptikk-app .cop__member__description {
   width: 100%;
-  color: #161616;
+  /* color: #161616; */
   font-weight: 400;
   line-height: 2rem;
+  color: #10305d;
 }
 .coptikk-app .cop__member__price {
   position: absolute;
