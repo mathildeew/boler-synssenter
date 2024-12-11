@@ -20,7 +20,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
   "exclude": [
     "node_modules"
@@ -29,6 +30,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "sanity.config.jsx"  ]
+    "**/*.tsx",
+    "sanity.config.jsx"
+  ]
 }
