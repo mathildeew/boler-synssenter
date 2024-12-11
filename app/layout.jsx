@@ -2,7 +2,7 @@
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 config.autoAddCss = false;
 
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="no">
       <GoogleTagManager gtmId="GTM-MJF75MS2" />
+      <GoogleAnalytics gaId="G-TDR2BFWGD4" />
 
       <body>
         <ClientLayout>{children}</ClientLayout>
