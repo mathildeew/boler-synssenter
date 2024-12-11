@@ -182,7 +182,7 @@
   color: #004f68;
   border-radius: 25px;
   border: 1px solid #004f68;
-  width: calc(100% - 20px);
+  /* width: calc(100% - 20px); */
   padding: 10px 0 10px 20px;
 }
 .coptikk-app .arrow-down_icon-wrapper .arrow-down_icon {
@@ -696,7 +696,8 @@
 .coptikk-app .react-datepicker__quarter-text--keyboard-selected,
 .coptikk-app .react-datepicker__year-text--keyboard-selected {
   border-radius: 0.3rem;
-  background-color: #004f68;
+  /* background-color: #004f68; */
+  background-color: #0f4996;
   color: #fff;
 }
 .coptikk-app .react-datepicker__day--keyboard-selected:hover,
@@ -884,16 +885,18 @@
   padding: 5px 0;
   clear: left;
 }
+
 .coptikk-app .react-datepicker__portal {
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  left: 0;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* left: 0;
   top: 0;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: flex; */
   z-index: 2147483647;
 }
 .coptikk-app .react-datepicker__portal .react-datepicker__day,
@@ -968,7 +971,9 @@
 }
 .coptikk-app .cop .member-label {
   font-size: 20px;
-  padding-bottom: 1rem;
+  /*  padding-bottom: 1rem; */
+  /* Added styles */
+  margin-bottom: 10px;
 }
 .coptikk-app .cop .container {
   display: block;
@@ -979,6 +984,8 @@
   font-size: 22px;
   user-select: none;
   margin-top: 5px;
+  /* Added styles */
+  width: fit-content;
 }
 .coptikk-app .cop .fc-primary {
   border-color: #004f68;
@@ -996,19 +1003,28 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 24px;
-  width: 24px;
-  border: 1px solid #004f68;
+  height: 18px;
+  width: 18px;
+  /* border: 1px solid #004f68; */
+  border: 1px solid #0f4996;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .coptikk-app .cop .return-btn {
-  background-color: #c7dee5;
+  /* background-color: #c7dee5; */
   border-color: #c7dee5;
-  color: #161616;
+  /* color: #161616; */
   display: block;
+  /* Added styles */
+  color: white;
+  background-color: #0f4996;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 12px 64px;
+  font-weight: bolder;
 }
 .coptikk-app .cop .return-btn-step {
   margin: 40px 0;
@@ -1028,7 +1044,8 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #004f68;
+  /* background: #004f68; */
+  background: #0f4996;
 }
 .coptikk-app .cop .store-field-with-error {
   border-color: #b8686a;
@@ -1143,16 +1160,19 @@
   position: relative;
 }
 .coptikk-app .cop__member__radio {
-  margin: auto 10px;
+  /* margin: auto 10px; */
+  /* display: none; */
 }
+
 .coptikk-app .cop__member__wrapper {
   display: inline-flex;
   justify-content: start;
   width: 100%;
   margin-bottom: 1.5rem;
 }
+
 .coptikk-app .cop__member__name {
-  padding-top: 10px;
+  /* padding-top: 10px; */
   width: 100%;
   color: #161616;
   font-weight: 700;

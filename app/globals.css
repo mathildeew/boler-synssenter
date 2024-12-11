@@ -36,24 +36,28 @@
     @apply text-5xl text-center font-serif;
   }
 
-  h2 {
+  h2,
+  .coptikk-app .cop .member-label {
     @apply text-3xl font-sans font-medium md:text-2xl;
   }
 
   p,
   a,
-  li {
-    font-size: 16px;
-    line-height: 30px;
+  li,
+  .cop__member__description,
+  .cop__sub-header {
+    @apply text-base leading-7;
   }
 
   p,
   h3,
-  a {
+  a,
+  .cop__member__description {
     @apply font-sans tracking-wide;
   }
 
-  h3 {
+  h3,
+  .cop__member__name {
     @apply text-xl font-semibold;
   }
 
@@ -152,6 +156,8 @@
       transform: rotate(1turn);
     }
   }
+
+  /* BOOKING FORM - - - - - - - - - -*/
 
   /* MEDIA QUERIES - - - - - - - - - -*/
   @media (min-width: 768px) {
