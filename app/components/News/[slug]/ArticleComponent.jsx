@@ -26,14 +26,14 @@ export default function ArticleComponent({ params }) {
     <>
       {isLoading && <Loader />}
 
-      {/* {isSuccess && (
+      {isSuccess && (
         <article className="flex flex-col items-center gap-12 px-4 py-16 md:px-10 md:py-20" data-animate-in="true">
           <Link href="/aktuelt" className="hover:underline">
             ← Aktuelt
           </Link>
           <RenderArticle title={article.title} article={article} />
         </article>
-      )} */}
+      )}
 
       {isError && <Error />}
     </>
