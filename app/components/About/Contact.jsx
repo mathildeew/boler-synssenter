@@ -39,9 +39,9 @@ export default function Contact() {
               Send oss en e-post på {mail}, så tar vi kontakt så fort vi kan. Du kan også ringe oss på {phone}.
             </p>
           </div>
-          <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" className="baseButton text-white hover:bg-logoBlue">
+          <Link to="bestill-time" className="baseButton text-white hover:bg-logoBlue">
             Bestill time
-          </a>
+          </Link>
         </div>
 
         <div className="w-full h-96 px-2 lg:h-auto">

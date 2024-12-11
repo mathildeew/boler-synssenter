@@ -38,9 +38,17 @@ export default function Header() {
 
         <nav className={`bg-lightBlue w-full h-screen absolute z-10 lg:hidden ${openMenu ? "visible" : "hidden"}`}>
           <div className="flex flex-col items-center gap-12 py-16">
-            <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+            <Link
+              href="/bestill-time"
+              className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
+              data-animate-in="true"
+              data-animation-order="1"
+              onClick={() => {
+                toogleLocked(false), setOpenMenu(false);
+              }}
+            >
               Bestill time
-            </a>
+            </Link>
             <Link
               href="/vaare-tjenester"
               className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2"
@@ -109,9 +117,9 @@ export default function Header() {
 
             <nav>
               <div className="flex flex-row gap-10 items-center">
-                <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
+                <Link href="/bestill-time" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="1">
                   Bestill time
-                </a>
+                </Link>
                 <Link href="/vaare-tjenester" className="text-xl font-sans tracking-wider hover:underline hover:underline-offset-2" data-animate-in="true" data-animation-order="2">
                   Våre tjenester
                 </Link>

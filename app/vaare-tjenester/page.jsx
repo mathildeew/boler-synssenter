@@ -2,6 +2,7 @@ import { client } from "../../sanity/sanity-utils";
 import apiQueries from "../../sanity/apiQueries";
 import RenderServices from "../components/Services/RenderServices";
 import { getMetadata } from "../hooks/getMetadata";
+import Link from "next/link";
 
 // Revalidate the page every 60 seconds
 export const revalidate = 60;
@@ -18,9 +19,9 @@ export default async function Tjenester() {
       <div className="max-w-[1000px] flex flex-col gap-8 items-center md:gap-12">
         <h1>Våre tjenester</h1>
         <span className="text-textBlue text-xl text-center md:text-3xl">{servicesInfo.intro}</span>
-        <a href="https://www.coptikk.no/bestill-synstest?single=true&current_optician=5099" target="_blank" className="baseButton text-white hover:bg-logoBlue">
+        <Link to="bestill-time" className="baseButton text-white hover:bg-logoBlue">
           Bestill time
-        </a>
+        </Link>
       </div>
 
       <RenderServices />
