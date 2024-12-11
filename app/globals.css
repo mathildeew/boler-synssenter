@@ -28,7 +28,8 @@
   h3,
   p,
   a,
-  li {
+  li
+   {
     color: theme(colors.textBlue);
   }
 
@@ -37,7 +38,8 @@
   }
 
   h2,
-  .coptikk-app .cop .member-label {
+  .coptikk-app .cop .member-label,
+  .cop__booking-form__title {
     @apply text-3xl font-sans font-medium md:text-2xl;
   }
 

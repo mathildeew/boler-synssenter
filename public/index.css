@@ -1092,12 +1092,15 @@
   padding: 15px;
 }
 .coptikk-app .cop__booking-form__title {
-  color: #004f68;
+  /* color: #004f68; */
   font-weight: 700;
+  color: #10305d;
 }
 .coptikk-app .cop__booking-form__success {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: none;
 }
+
 .coptikk-app .cop__booking-form__success__header {
   padding-top: 15px;
   padding-bottom: 5px;
