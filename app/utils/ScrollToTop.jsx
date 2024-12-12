@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
  *
  * @component
  * @example
- * // Use at high level in the app, such as main layout.
+ * Use at high level in the app, such as main layout.
  * return (
  *   <ScrollToTop />
  *   <YourOtherComponents />
