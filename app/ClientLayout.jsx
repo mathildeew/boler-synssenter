@@ -6,7 +6,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 
 // Context & components
 import { StoreInfoProvider } from "./context/StoreInforProvider";
-import Header from "./components/UI/Header";
+import Header from "./components/UI/Header/Header";
 import Footer from "./components/UI/Footer";
 
 export default function ClientLayout({ children }) {
