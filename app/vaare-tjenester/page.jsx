@@ -20,7 +20,7 @@ export default async function Tjenester() {
       <div className="max-w-[1000px] flex flex-col gap-8 items-center md:gap-12">
         <h1>Våre tjenester</h1>
         <span className="text-textBlue text-xl text-center md:text-3xl">{servicesInfo.intro}</span>
-        <Link to="bestill-time" className="baseButton text-white hover:bg-logoBlue">
+        <Link href="/bestill-time" className="baseButton text-white hover:bg-logoBlue">
           Bestill time
         </Link>
       </div>
